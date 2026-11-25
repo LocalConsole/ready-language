@@ -23,10 +23,10 @@ App.lemma=function(raw){const w=raw.toLowerCase().replace(/[^a-z'-]/g,'').replac
 /* ---------- голос ---------- */
 App.voices=()=>speechSynthesis.getVoices().filter(v=>/^en/i.test(v.lang));
 App.speak=function(text,o){o=o||{};return new Promise(res=>{if(!('speechSynthesis' in window)){res(false);return}
- speechSynthesis.cancel();const lines=o.dialog?text.split('\n').filter(Boolean):[text];const vs=App.voices();let i=0;
- const next=()=>{if(i>=lines.length||App.stopSpeak){res(true);return}let ln=lines[i++],sp=0;const m=ln.match(/^([A-Za-z ]+):\s*/);if(m){ln=ln.slice(m[0].length);sp=/caller|student|woman|b$/i.test(m[1])?1:0}
+ speechSynthesis.cancel();const g=App.sg=(App.sg||0)+1;const lines=o.dialog?text.split('\n').filter(Boolean):[text];const vs=App.voices();let i=0;
+ const next=()=>{if(g!==App.sg||i>=lines.length||App.stopSpeak){res(true);return}let ln=lines[i++],sp=0;const m=ln.match(/^([A-Za-z ]+):\s*/);if(m){ln=ln.slice(m[0].length);sp=/caller|student|woman|b$/i.test(m[1])?1:0}
   const u=new SpeechSynthesisUtterance(ln);u.lang='en-GB';u.rate=o.rate||.95;if(vs.length)u.voice=vs[(sp%vs.length+(o.vo||0))%vs.length];u.onend=next;u.onerror=next;speechSynthesis.speak(u)};App.stopSpeak=false;next();setTimeout(()=>res(true),Math.min(180000,text.length*120+5000))})};
-App.stop=()=>{App.stopSpeak=true;try{speechSynthesis.cancel()}catch(e){}};
+App.stop=()=>{App.stopSpeak=true;App.sg=(App.sg||0)+1;try{speechSynthesis.cancel()}catch(e){}};
 App.ACC={vocab:'vocab',grammar:'grammar',reading:'reading',listening:'listening',rw:'sat_rw',math:'sat_math'};
 App.POS={n:'существительное',v:'глагол',adj:'прилагательное',adv:'наречие'};
 App.head=(ic,title,sub,acc)=>`<div class="ph" data-acc="${acc||'vocab'}"><span class="pic">${ic}</span><div><h1>${title}</h1>${sub?'<p>'+sub+'</p>':''}</div></div>`;
@@ -77,22 +77,22 @@ App.Quiz={
   const finish=(timeUp)=>{if(done)return;done=true;clearInterval(tmr);App.stop();resolve({results,total,ok:results.filter(r=>r.ok).length,timeUp:!!timeUp})};
   const drawTimer=()=>{const el=$('#qt',root);if(!el)return;const m=Math.floor(left/60),s=left%60;el.textContent=m+':'+String(s).padStart(2,'0');el.classList.toggle('low',left<=60)};
   if(left){tmr=setInterval(()=>{if(tok!==App.token){clearInterval(tmr);return}left--;drawTimer();if(left<=0)finish(true)},1000)}
-  const show=()=>{if(tok!==App.token){clearInterval(tmr);return}
+  const show=()=>{if(tok!==App.token){clearInterval(tmr);return}App.stop();
    const q=o.next?o.next(results,i):o.questions[i];if(!q||(!o.next&&i>=o.questions.length)||i>=total){finish();return}
    const p=q.passage?D.passage[q.passage]:null,isL=p&&p.skill==='listening',letters='ABCDEFGH';
    let ans=null,answered=false,played=false,qs=Date.now();
    root.innerHTML=`${o.header||''}<div class="card top" data-acc="${App.ACC[q.skill]||'vocab'}"><div class="q-head"><span class="pill ${q.skill}">${esc(o.title||'')}</span><span class="small mute qn">Вопрос ${i+1} из ${total}</span><span class="sp"></span>${left?'<span class="timer" id="qt"></span>':''}</div>
    <div class="bar"><i style="width:${Math.round(i/total*100)}%"></i></div><div style="height:.8rem"></div>
    ${p&&!isL?`<div class="passage" tabindex="0"><b>${esc(p.title)}</b>\n\n${esc(p.text)}</div>`:''}
-   ${isL?`<div class="row" style="margin-bottom:.6rem"><button class="btn alt" id="play">▶ Слушать</button>${o.once?'':'<span class="small mute">можно переслушать</span>'}<label class="small"><input type="checkbox" id="sub"> субтитры</label></div><div class="passage" id="tr" hidden>${esc(p.text)}</div>`:''}
+   ${isL?`<div class="row" style="margin-bottom:.6rem"><button class="btn alt" id="play">▶ Слушать</button><button class="btn alt" id="stp" hidden>⏹ Стоп</button>${o.once?'':'<span class="small mute">можно переслушать</span>'}<label class="small"><input type="checkbox" id="sub"> субтитры</label></div><div class="passage" id="tr" hidden>${esc(p.text)}</div>`:''}
    ${q.audio?`<div class="row"><button class="btn alt" id="aud">🔊 Слушать слово</button></div>`:''}
    <h3 id="qq">${esc(q.q)}</h3>
    ${q.typ==='mcq'?q.opts.map((t,k)=>`<button class="opt" data-k="${k}"><i class="lt">${letters[k]}</i><span>${esc(t)}</span></button>`).join(''):`<input type="text" id="ti" autocomplete="off" autocapitalize="off" spellcheck="false" aria-label="Ответ" placeholder="Твой ответ…">${q.hint?'<div class="small mute">Подсказка: '+esc(q.hint)+'</div>':''}`}
    <div id="fb"></div><div class="row" style="margin-top:.8rem"><button class="btn alt sm" id="skip">${t('skip')}</button><span class="sp"></span><button class="btn" id="go" ${q.typ==='mcq'&&!o.feedback?'disabled':''}>${q.typ==='mcq'&&o.feedback?t('next'):t('check')}</button></div></div>`;
    drawTimer();
-   if(isL){$('#play',root).onclick=async()=>{if(o.once&&played)return;played=true;const b=$('#play',root);b.disabled=!!o.once;b.textContent='🔊 Играет…';await App.speak(p.text,{dialog:true,rate:.92});if(!done&&b.isConnected){b.textContent='▶ Ещё раз';b.disabled=!!o.once}};$('#sub',root).onchange=e=>$('#tr',root).hidden=!e.target.checked}
+   if(isL){$('#play',root).onclick=async()=>{if(o.once&&played)return;played=true;const b=$('#play',root);b.disabled=!!o.once;b.textContent='🔊 Играет…';const sb=$('#stp',root);sb.hidden=false;await App.speak(p.text,{dialog:true,rate:.92});if(!done&&b.isConnected){b.textContent='▶ Ещё раз';b.disabled=!!o.once;sb.hidden=true}};$('#stp',root).onclick=()=>{App.stop();const b=$('#play',root);b.textContent='▶ Ещё раз';b.disabled=!!o.once;$('#stp',root).hidden=true};$('#sub',root).onchange=e=>$('#tr',root).hidden=!e.target.checked}
    if(q.audio)$('#aud',root).onclick=()=>App.speak(q.audio,{rate:.8});
-   const commit=(skipped)=>{if(answered)return;answered=true;let ok=false;
+   const commit=(skipped)=>{if(answered)return;answered=true;App.stop();let ok=false;
     if(!skipped){if(q.typ==='mcq')ok=ans===q.a;else{const v=($('#ti',root).value||'').trim();ans=v;ok=q.typ==='sent'?(v.toLowerCase().includes(q.answer.toLowerCase().slice(0,Math.max(4,q.answer.length-3)))&&v.split(/\s+/).length>=4):v.toLowerCase()===q.answer.toLowerCase()}}
     results.push({q,ans:skipped?null:ans,ok,ms:Date.now()-qs});
     if(o.feedback){Snd.play(ok?'ok':'bad');$$('.opt',root).forEach((b,k)=>{b.disabled=true;if(k===q.a)b.classList.add('good');else if(k===ans)b.classList.add('bad')});
