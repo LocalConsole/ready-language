@@ -39,3 +39,5 @@ export function sanitize(html: string): string {
 export function stripTags(html: string): string {
   return html.replace(/<[^>]+>/g, '');
 }
+
+export const escapeHtml = (s: string): string => s.replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[c]!);
