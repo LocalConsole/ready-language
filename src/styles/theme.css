@@ -81,9 +81,6 @@ a.btn{text-decoration:none}
 @keyframes bob{0%,100%{transform:translateY(0) rotate(-1deg)}50%{transform:translateY(-6px) rotate(1.5deg)}}
 
 /* лесная карта */
-.fmap{position:relative;margin:0 -1rem 1rem;padding:0;background:radial-gradient(ellipse at 15% 8%,var(--forest),transparent 55%),radial-gradient(ellipse at 90% 90%,var(--forest),transparent 55%)}
-.fmap-path{position:absolute;inset:0;width:100%;height:100%}
-.fmap-paw{position:absolute;color:var(--trail-edge);opacity:.9;pointer-events:none}
 .fmap-slot{position:absolute;transform:translate(-50%,-50%);display:flex;flex-direction:column;align-items:center;width:130px}
 .fnode{position:relative;display:grid;place-items:center;width:68px;height:68px;border-radius:50%;background:var(--card);border:4px solid var(--line);box-shadow:0 5px 0 var(--line);text-decoration:none;transition:transform .12s,box-shadow .12s}
 .fnode:active{transform:translateY(4px);box-shadow:0 1px 0 var(--line)}
@@ -151,3 +148,10 @@ body.reduce .misha .pose,body.reduce .strip,body.reduce .mloader-trail i,body.re
 @keyframes m-zoom{to{transform:scale(1.06)}}
 @media (prefers-reduced-motion:reduce){.trophy img{animation:none!important}}
 body.reduce .trophy img{animation:none!important}
+
+.fmap{position:relative;margin:0 -1rem 1rem;overflow:hidden;background:#EBF3CE}
+[data-theme=dark] .fmap{background:#1E2522}
+.fmap-tiles{width:100%}
+.fmap-tile{width:100%;aspect-ratio:382/1376;background:var(--tile-l) center/100% 100% no-repeat}
+[data-theme=dark] .fmap-tile{background-image:var(--tile-d)}
+.fmap-tile.flip{transform:scaleY(-1)}
