@@ -2,7 +2,7 @@ import { memo, useEffect, useMemo, useRef, useState } from 'react';
 import { Link, Navigate, useParams } from 'react-router-dom';
 import { useLiveQuery } from 'dexie-react-hooks';
 import { Quiz } from '@/components/Quiz';
-import { Mood } from '@/components/Mascot';
+import { MishaLoader, Mood } from '@/components/Mascot';
 import { Bar } from '@/components/ui';
 import { Morph as WordMorph } from '@/components/Morph';
 import { db } from '@/lib/db';
@@ -165,7 +165,7 @@ function WordPopup({ raw, idx, onClose }: { raw: string; idx: ReturnType<typeof 
   };
   return (
     <div className="pop reader-pop" role="dialog" aria-label={t('Слово')} data-testid="word-popup">
-      {loading ? <><div className="row"><span className="small mute sp">{raw}…</span><button className="btn alt sm" aria-label={t('Закрыть')} data-testid="pop-close" onClick={onClose}>✕</button></div><div className="skel" /><div className="skel" style={{ width: '60%' }} /></> : (
+      {loading ? <><div className="row"><span className="small mute sp">{raw}…</span><button className="btn alt sm" aria-label={t('Закрыть')} data-testid="pop-close" onClick={onClose}>✕</button></div><MishaLoader className="sm" /></> : (
         <>
           <div className="row">
             <h2 style={{ margin: 0 }}>{info ? info.w : raw}</h2>

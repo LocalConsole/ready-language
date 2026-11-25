@@ -1,10 +1,9 @@
 import { Suspense, useEffect, useRef, useState } from 'react';
 import { NavLink, Outlet, useLocation } from 'react-router-dom';
 import { MotionConfig, motion } from 'framer-motion';
-import { Mascot, Mood } from './Mascot';
+import { Mascot, MishaLoader } from './Mascot';
 import { Toasts, ConfettiCanvas } from './Toasts';
 import { ErrorBoundary } from './ErrorBoundary';
-import { Skel } from './ui';
 import { useProgress } from '@/store/progress';
 import { useSettings } from '@/store/settings';
 import { aiAvailable, useAIStatus } from '@/lib/ai';
@@ -87,7 +86,7 @@ export function Layout() {
         </header>
         <main id="main" ref={mainRef} tabIndex={-1}>
           <ErrorBoundary resetKey={loc.pathname}>
-            <Suspense fallback={<div className="card"><Mood state="think" text={t('Миша ищет нужную страницу…')} /><Skel /><Skel w="60%" /></div>}>
+            <Suspense fallback={<div className="card"><MishaLoader text={t('Миша ищет нужную страницу…')} /></div>}>
               <motion.div key={loc.pathname} initial={{ opacity: 0, y: 8 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.18 }}>
                 <Outlet />
               </motion.div>

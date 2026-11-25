@@ -2,7 +2,7 @@ import { useCallback, useEffect, useMemo, useRef, useState, type ReactNode } fro
 import { AnimatePresence, motion } from 'framer-motion';
 import type { QResult, Question, QuizResult } from '@/types';
 import { Html, Bar, Pill } from './ui';
-import { Mascot } from './Mascot';
+import { Reaction } from './Mascot';
 import { getD } from '@/data';
 import { playSound, speak, stopSpeak } from '@/lib/fx';
 import { fmtTime } from '@/lib/util';
@@ -228,7 +228,7 @@ function QuestionCard({ q, i, total, left, title, feedback, once, startedAt, onA
       )}
       {answered && (
         <div className="say" style={{ marginTop: '.8rem' }} data-testid="feedback">
-          <Mascot state={result.ok ? 'happy' : 'sad'} still style={{ width: 74 }} />
+          <Reaction kind={result.ok ? (i % 2 ? 'good' : 'correct') : 'oops'} style={{ width: 84, flex: 'none' }} />
           <div className={`expl ${result.ok ? 'good' : 'bad'}`} style={{ flex: 1 }}>
             <b className="vd">{result.ok ? '✅ ' + t('Верно!') : '❌ ' + t('Неверно')}</b>
             {q.typ !== 'mcq' && <><br />{t('Правильный ответ')}: <b>{q.answer}</b></>}

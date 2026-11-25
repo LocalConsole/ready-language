@@ -182,4 +182,6 @@ export const UZ_EXTRA: Record<string, string> = {
   "Продолжить": "Davom etish",
   "Заморозка серии": "Seriyani muzlatish",
   "Следующий урок": "Keyingi dars",
+  "Ура! Супер-рык!": "Ura! Super-g‘ark!",
+  "Миша": "Misha",
 };

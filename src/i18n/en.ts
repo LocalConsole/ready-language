@@ -600,4 +600,5 @@ export const EN: Record<string, string> = {
   "Продолжить": "Continue",
   "Заморозка серии": "Streak freeze",
   "Следующий урок": "Next lesson",
+  "Ура! Супер-рык!": "Hooray! Super-roar!",
 };

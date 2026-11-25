@@ -106,3 +106,48 @@ a.btn{text-decoration:none}
 @media(prefers-reduced-motion:reduce){.hero-m,.fmap-misha,.fnode.next{animation:none!important}}
 body.reduce .hero-m,body.reduce .fmap-misha,body.reduce .fnode.next{animation:none!important}
 @media(max-width:720px){#top nav{display:none}}
+
+/* ───────── Миша: спрайты и анимации ───────── */
+.misha{display:block;width:130px;flex:none}
+.misha .pose{display:block;width:100%;height:auto;transform-origin:50% 100%;animation:m-breathe 3.2s ease-in-out infinite;user-select:none;-webkit-user-drag:none}
+.misha .pose-happy,.misha .pose-cheer{animation:m-bob 1.6s ease-in-out infinite}
+.misha .pose-sad{animation:m-sway 4s ease-in-out infinite}
+.misha .pose.still{animation:none}
+.strip{width:100%;background-repeat:no-repeat;background-position:0 0}
+.strip-idle:not(.still){animation:m-idle 5s steps(1,end) infinite}
+.strip-jump{animation:m-jump 2.4s steps(1,end) infinite}
+.strip-walk{animation:m-walk .9s steps(8) infinite}
+.strip.still{animation:none!important}
+@keyframes m-breathe{50%{transform:scale(1.015,1.03)}}
+@keyframes m-bob{0%,100%{transform:translateY(0) rotate(-1deg)}50%{transform:translateY(-5px) rotate(1.5deg)}}
+@keyframes m-sway{0%,100%{transform:rotate(-1.2deg)}50%{transform:rotate(1.2deg)}}
+/* моргание: кадры 0 открыт, 1 прищур, 2 закрыт, 3 «плечи вверх» */
+@keyframes m-idle{0%,76%{background-position-x:0}78%{background-position-x:100%}82%{background-position-x:0}88%{background-position-x:33.333%}90%{background-position-x:66.666%}93%{background-position-x:33.333%}96%,100%{background-position-x:0}}
+@keyframes m-jump{0%{background-position-x:0}8%{background-position-x:20%}16%{background-position-x:40%}24%{background-position-x:60%}32%{background-position-x:80%}40%,100%{background-position-x:100%}}
+@keyframes m-walk{from{background-position-x:0}to{background-position-x:114.2857%}}
+
+.mloader{display:flex;flex-direction:column;align-items:center;gap:.4rem;padding:1.2rem .5rem;text-align:center}
+.mloader-walk{position:relative;width:150px}
+.mloader-walk .strip{animation-duration:.8s}
+.mloader-trail{position:absolute;left:0;right:0;bottom:2px;display:flex;justify-content:space-around;pointer-events:none}
+.mloader-trail i{width:9px;height:9px;border-radius:50% 50% 45% 45%;background:var(--brown,#7D4F27);opacity:0;animation:m-paw 1.6s ease-out infinite}
+.mloader-trail i:nth-child(2){animation-delay:.4s}.mloader-trail i:nth-child(3){animation-delay:.8s}.mloader-trail i:nth-child(4){animation-delay:1.2s}
+@keyframes m-paw{0%{opacity:0;transform:translateX(12px) scale(.5)}20%{opacity:.7}100%{opacity:0;transform:translateX(-26px) scale(1)}}
+.mloader-t{font-weight:800;color:var(--brand)}
+
+.react{display:block;width:100%;height:auto;max-width:140px;animation:m-pop .45s cubic-bezier(.3,1.6,.5,1) both}
+@keyframes m-pop{from{transform:scale(.4) rotate(-8deg);opacity:0}to{transform:none;opacity:1}}
+
+@media (prefers-reduced-motion:reduce){
+  .misha .pose,.strip,.mloader-trail i,.react{animation:none!important}
+}
+body.reduce .misha .pose,body.reduce .strip,body.reduce .mloader-trail i,body.reduce .react{animation:none!important}
+.avatar{width:150px;height:150px;border-radius:50%;object-fit:cover;border:4px solid var(--honey);box-shadow:0 4px 0 var(--brown,#7D4F27)}
+.mloader.sm{padding:.4rem}.mloader.sm .mloader-walk{width:84px}
+.trophy{position:relative;border-radius:20px;overflow:hidden;margin:-.2rem -.2rem 1rem;box-shadow:0 4px 0 rgba(0,0,0,.12)}
+.trophy img{display:block;width:100%;height:auto;animation:m-zoom 9s ease-in-out infinite alternate}
+.trophy-t{position:absolute;left:0;right:0;bottom:0;padding:1.4rem .8rem .7rem;text-align:center;color:#fff;background:linear-gradient(transparent,rgba(30,25,10,.72));display:flex;flex-direction:column;gap:.1rem;text-shadow:0 2px 4px rgba(0,0,0,.4)}
+.trophy-t b{font-size:1.5rem;font-weight:900;color:#FFD66B}
+@keyframes m-zoom{to{transform:scale(1.06)}}
+@media (prefers-reduced-motion:reduce){.trophy img{animation:none!important}}
+body.reduce .trophy img{animation:none!important}

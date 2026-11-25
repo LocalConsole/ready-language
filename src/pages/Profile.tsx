@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { Mascot, useOutfit } from '@/components/Mascot';
+import { Mascot, asset, useOutfit } from '@/components/Mascot';
 import { Bar, PageHead } from '@/components/ui';
 import { useProgress } from '@/store/progress';
 import { level, lvlProgress } from '@/lib/plan';
@@ -21,7 +21,10 @@ export default function Profile() {
       <PageHead icon="🐻" title={t('Миша и ты')} sub={t('Твой уровень, достижения и гардероб Миши.')} acc="speaking" />
       <div className="card">
         <div className="grid g2">
-          <div style={{ maxWidth: 240, margin: 'auto' }}><Mascot state="hello" /></div>
+          <div style={{ maxWidth: 240, margin: 'auto', textAlign: 'center' }}>
+            <img className="avatar" src={asset('avatar.webp')} alt={t('Миша')} width={150} height={150} />
+            <Mascot state="hello" style={{ width: 150, margin: '.4rem auto 0' }} />
+          </div>
           <div>
             <h2>{t('Уровень')} {level(xp)}</h2>
             <p>{xp} XP · {t('серия')} {streak} {t('дн.')}</p>

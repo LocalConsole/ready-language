@@ -2,7 +2,7 @@ import { useMemo, useRef, useState } from 'react';
 import { Link, Navigate, useParams } from 'react-router-dom';
 import type { QResult, QuizResult, Word } from '@/types';
 import { Quiz } from '@/components/Quiz';
-import { Mood, Say } from '@/components/Mascot';
+import { Mood, Say, TrophyHero } from '@/components/Mascot';
 import { Bar, Html } from '@/components/ui';
 import { WordCards } from '@/features/vocab/WordCards';
 import { useData } from '@/data';
@@ -81,6 +81,7 @@ function LessonFlow() {
       <>
         {hdr}
         <div className="card" data-testid="lesson-done">
+          {fin.score >= 60 && <TrophyHero title={t('Ура! Супер-рык!')} sub={`+${fin.gained} XP`} />}
           <Mood state={fin.score >= 60 ? 'celebrate' : 'cheer'} text={<>{t('Урок пройден! Результат')}: <b>{fin.score}%</b> (+{fin.gained} XP).</>} />
           <div className="expl">📝 <b>{t('Домашка')}:</b> {hw}</div>
           <div className="row" style={{ marginTop: '1rem' }}>

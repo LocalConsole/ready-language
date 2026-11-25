@@ -15,7 +15,7 @@ export default defineConfig({
       registerType: 'autoUpdate',
       includeAssets: ['icons/icon.svg', 'icons/icon-maskable.svg'],
       injectManifest: {
-        globPatterns: ['**/*.{js,css,html,svg,png,json,webmanifest}'],
+        globPatterns: ['**/*.{js,css,html,svg,png,json,webp,webmanifest}'],
         maximumFileSizeToCacheInBytes: 3 * 1024 * 1024,
       },
       manifest: {
