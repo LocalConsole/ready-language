@@ -1,0 +1,256 @@
+abandon|v|покидать, бросать|to leave something or someone completely|Many farmers abandoned their land during the drought.|general|2
+abstract|adj|абстрактный|existing as an idea, not a physical thing|Freedom is an abstract concept.|academic|2
+accelerate|v|ускорять|to happen or make something happen faster|Technology has accelerated the pace of change.|academic|2
+access|n|доступ|the right or ability to use or reach something|Students need access to reliable internet.|education|1
+accommodate|v|вмещать; приспосабливать|to provide space or adapt to needs|The hotel can accommodate 500 guests.|general|3
+accumulate|v|накапливать|to gradually get more of something|She accumulated a large collection of books.|academic|3
+accurate|adj|точный|correct and exact|The report gave an accurate picture of the situation.|academic|1
+acknowledge|v|признавать|to accept that something is true|He acknowledged that he had made a mistake.|academic|2
+acquire|v|приобретать|to get something, especially a skill or object|Children acquire language naturally.|education|2
+adapt|v|приспосабливаться|to change to suit new conditions|Species must adapt to a changing climate.|environment|1
+adequate|adj|достаточный|enough for a particular purpose|The funding was not adequate for the project.|academic|2
+adjacent|adj|соседний, смежный|next to or near something|The library is adjacent to the main hall.|general|3
+advocate|v|выступать за|to publicly support an idea or plan|Doctors advocate a balanced diet.|society|3
+aggregate|n|совокупность|a total formed from many separate items|The aggregate of the results was positive.|academic|3
+allocate|v|распределять|to give resources for a particular purpose|The government allocated funds to schools.|economy|3
+alleviate|v|облегчать|to make pain or a problem less severe|New roads alleviated traffic congestion.|health|3
+alternative|n|альтернатива|another option that can be chosen|Solar power is an alternative to coal.|environment|1
+ambiguous|adj|неоднозначный|having more than one possible meaning|The question was ambiguous.|academic|3
+analyse|v|анализировать|to examine something in detail|Researchers analysed the data carefully.|academic|1
+anticipate|v|ожидать, предвидеть|to expect that something will happen|Experts anticipate a rise in prices.|general|2
+apparent|adj|очевидный|easy to see or understand|It was apparent that he was tired.|general|2
+approach|n|подход|a way of dealing with something|A new approach to teaching languages.|academic|1
+appropriate|adj|подходящий|suitable for a particular situation|Wear appropriate clothing for the interview.|general|1
+arbitrary|adj|произвольный|based on chance, not reason|The choice seemed completely arbitrary.|academic|3
+assert|v|утверждать|to state something firmly|She asserted her right to speak.|academic|3
+assess|v|оценивать|to judge the quality or amount of something|Teachers assess students through exams.|education|1
+assume|v|предполагать|to accept something as true without proof|I assumed the shop would be open.|academic|1
+attain|v|достигать|to succeed in getting something|She attained the highest score in her class.|education|3
+attribute|v|приписывать|to say that something is caused by something|He attributed his success to hard work.|academic|3
+authentic|adj|подлинный|real and not copied|The museum displays authentic Roman coins.|culture|2
+bias|n|предвзятость|an unfair preference for one side|The article showed a clear bias.|society|2
+brief|adj|краткий|short in time or length|She gave a brief summary.|general|1
+capacity|n|вместимость; способность|the maximum amount something can hold or do|The stadium has a capacity of 50,000.|general|2
+catastrophe|n|катастрофа|a sudden event causing great damage|The flood was a catastrophe for the town.|environment|3
+circumstance|n|обстоятельство|a condition connected to an event|Under no circumstances should you panic.|general|2
+cite|v|ссылаться, цитировать|to mention as an example or proof|The author cited several studies.|academic|2
+clarify|v|прояснять|to make something easier to understand|Could you clarify what you mean?|academic|2
+coherent|adj|связный, логичный|logical and well organised|She presented a coherent argument.|academic|3
+collapse|v|рушиться|to fall down or fail suddenly|The bridge collapsed after the storm.|general|2
+compensate|v|компенсировать|to balance or make up for a loss|Nothing can compensate for lost time.|economy|3
+complement|v|дополнять|to go well with something|The wine complemented the meal perfectly.|general|3
+comprehensive|adj|всесторонний|including everything necessary|A comprehensive guide to grammar.|academic|2
+concept|n|понятие, концепция|an idea or principle|The concept of time is hard to define.|academic|1
+conclude|v|делать вывод|to decide something after thinking|The study concluded that sleep improves memory.|academic|1
+conflict|n|конфликт|a serious disagreement or fight|The conflict lasted for several years.|society|1
+consecutive|adj|последовательный|following one after another|It rained for five consecutive days.|general|3
+consequence|n|последствие|a result of an action|Climate change has serious consequences.|general|1
+considerable|adj|значительный|large in amount or importance|He spent a considerable amount of money.|general|2
+consistent|adj|последовательный, стабильный|always behaving or happening in the same way|Her results have been consistent.|academic|2
+constitute|v|составлять|to be or form a part of something|Women constitute 60% of the workforce.|academic|3
+constraint|n|ограничение|something that limits what you can do|Budget constraints delayed the project.|economy|3
+contemporary|adj|современный|belonging to the present time|Contemporary art is often controversial.|culture|2
+contradict|v|противоречить|to say the opposite of something|The new evidence contradicts his story.|academic|2
+contribute|v|вносить вклад|to give something to help achieve a result|Exercise contributes to good health.|general|1
+controversial|adj|спорный|causing disagreement|The decision was highly controversial.|society|2
+convenient|adj|удобный|easy to use or suitable|The hotel has a convenient location.|general|1
+convince|v|убеждать|to make someone believe something|She convinced him to apply.|general|1
+crucial|adj|решающий|extremely important|Sleep is crucial for learning.|general|2
+cultivate|v|выращивать; развивать|to grow plants or develop a quality|Farmers cultivate rice in this region.|environment|3
+curriculum|n|учебная программа|the subjects taught in a school|The curriculum includes science and art.|education|2
+debate|n|дебаты|a formal discussion on a topic|There is a debate about school uniforms.|society|1
+decline|v|снижаться; отклонять|to become smaller or refuse politely|Birth rates have declined sharply.|economy|2
+deficit|n|дефицит|the amount by which something is too small|The country has a large budget deficit.|economy|3
+demonstrate|v|демонстрировать|to show clearly|The experiment demonstrates the effect of heat.|academic|1
+deny|v|отрицать|to say that something is not true|He denied taking the money.|general|1
+depict|v|изображать|to show in a picture or words|The painting depicts a stormy sea.|culture|3
+derive|v|происходить, извлекать|to get something from a source|The word derives from Latin.|academic|3
+detect|v|обнаруживать|to notice or discover something|Doctors can detect the disease early.|health|2
+deteriorate|v|ухудшаться|to become worse|His health deteriorated rapidly.|health|3
+determine|v|определять|to find out or decide exactly|Scientists determined the cause of the fire.|academic|1
+distinct|adj|отчётливый, отдельный|clearly different or separate|There are three distinct groups.|academic|2
+distribute|v|распространять|to give out to a number of people|Food was distributed to the villagers.|general|2
+diverse|adj|разнообразный|made up of many different kinds|London has a diverse population.|society|2
+domestic|adj|домашний; внутренний|relating to the home or own country|Domestic flights are cheaper.|economy|2
+dominant|adj|доминирующий|most important or powerful|English is the dominant language of science.|society|2
+drastic|adj|радикальный|extreme and sudden|Drastic measures were needed.|general|3
+dynamic|adj|динамичный|full of energy and change|A dynamic and growing economy.|economy|2
+eliminate|v|устранять|to remove completely|The aim is to eliminate poverty.|general|2
+emerge|v|появляться|to appear or become known|New problems emerged during the trial.|general|2
+emphasise|v|подчёркивать|to give special importance to|The teacher emphasised the need for practice.|academic|1
+enable|v|давать возможность|to make something possible|Technology enables remote work.|general|1
+encounter|v|сталкиваться|to meet or experience unexpectedly|Students often encounter difficulties.|general|2
+enhance|v|улучшать|to improve the quality of something|Music can enhance concentration.|general|2
+enormous|adj|огромный|extremely large|The project required enormous effort.|general|1
+ensure|v|гарантировать|to make certain that something happens|Please ensure the door is locked.|general|1
+entity|n|сущность|a separate thing that exists|The company is a legal entity.|academic|3
+environment|n|окружающая среда|the natural world or surroundings|We must protect the environment.|environment|1
+equivalent|adj|равноценный|equal in value or meaning|One litre is roughly equivalent to 1.76 pints.|academic|2
+erode|v|разрушать, размывать|to gradually wear away|The sea has eroded the coastline.|environment|3
+establish|v|основывать, устанавливать|to set up or prove|The university was established in 1850.|general|1
+estimate|v|оценивать приблизительно|to guess the size or value|They estimate that 10,000 people attended.|academic|1
+evaluate|v|оценивать|to judge the value or quality of|We need to evaluate the results.|academic|2
+eventually|adv|в конце концов|after a long time|Eventually, she found a job.|general|1
+evidence|n|доказательство|facts that show something is true|There is no evidence of life on Mars.|academic|1
+evolve|v|развиваться, эволюционировать|to develop gradually|Languages evolve over time.|science|2
+exaggerate|v|преувеличивать|to make something seem larger or better|Don't exaggerate the problem.|general|3
+exceed|v|превышать|to be greater than a limit|Speed must not exceed 50 km/h.|general|2
+exclude|v|исключать|to leave out or prevent from taking part|Children under five are excluded.|general|2
+exhibit|v|демонстрировать, выставлять|to show in public|The gallery exhibits modern sculpture.|culture|2
+expand|v|расширяться|to become larger|The company plans to expand abroad.|economy|1
+exploit|v|использовать; эксплуатировать|to use fully or unfairly|Companies exploit natural resources.|economy|3
+expose|v|подвергать воздействию; раскрывать|to uncover or make vulnerable|Don't expose children to loud noise.|general|2
+facilitate|v|облегчать, содействовать|to make easier|Software facilitates communication.|academic|3
+factor|n|фактор|one thing that influences a result|Cost is an important factor.|general|1
+feasible|adj|осуществимый|possible and practical|The plan is not financially feasible.|academic|3
+fluctuate|v|колебаться|to change frequently|Prices fluctuate throughout the year.|economy|3
+formulate|v|формулировать|to create carefully|She formulated a new theory.|academic|3
+foster|v|способствовать, взращивать|to encourage the development of|Schools should foster creativity.|education|3
+fundamental|adj|основополагающий|forming the basis of something|Honesty is fundamental to trust.|academic|2
+generate|v|порождать, производить|to produce or cause|Wind turbines generate electricity.|environment|1
+genuine|adj|настоящий, искренний|real and sincere|He showed genuine concern.|general|2
+globalisation|n|глобализация|the spread of business and culture worldwide|Globalisation has changed trade.|economy|2
+grant|v|предоставлять|to give or allow officially|The university granted her a scholarship.|education|2
+hierarchy|n|иерархия|a system with ranks of importance|The company has a strict hierarchy.|society|3
+hypothesis|n|гипотеза|an idea to be tested|The experiment tested her hypothesis.|science|2
+identify|v|определять, опознавать|to recognise and name|Can you identify the main problem?|academic|1
+illustrate|v|иллюстрировать|to explain with examples or pictures|The graph illustrates the trend.|academic|2
+immense|adj|огромный|extremely large|The pressure on students is immense.|general|2
+implement|v|внедрять|to put a plan into action|The school implemented a new policy.|academic|2
+implication|n|следствие, подтекст|a possible effect or meaning|The findings have important implications.|academic|2
+inevitable|adj|неизбежный|certain to happen|Change is inevitable.|general|3
+infer|v|делать вывод|to form an opinion from evidence|We can infer that he was upset.|academic|3
+inherent|adj|присущий|existing as a natural part|Risk is inherent in business.|academic|3
+initiative|n|инициатива|a new plan or the ability to act first|She showed initiative at work.|general|2
+innovation|n|нововведение|a new idea or method|Innovation drives economic growth.|science|2
+insight|n|понимание, озарение|a deep understanding|The book offers insight into Russian culture.|academic|2
+integrate|v|интегрировать|to combine into a whole|Schools try to integrate technology.|academic|2
+integrity|n|честность, целостность|honesty and strong moral principles|A person of great integrity.|society|3
+interpret|v|толковать|to explain the meaning of|Historians interpret the evidence differently.|academic|2
+intervene|v|вмешиваться|to become involved to change a situation|Police had to intervene.|society|3
+isolate|v|изолировать|to separate from others|Patients were isolated to stop the spread.|health|2
+justify|v|оправдывать|to show a good reason for|How can you justify this cost?|academic|2
+legislation|n|законодательство|laws made by a government|New legislation protects workers.|society|3
+legitimate|adj|законный|allowed by law or reasonable|He has a legitimate reason to complain.|society|3
+liberal|adj|либеральный; щедрый|open to new ideas or generous|A liberal approach to education.|society|3
+manipulate|v|манипулировать|to control cleverly or unfairly|Advertisers manipulate emotions.|society|3
+marginal|adj|незначительный|very small in effect|There was a marginal improvement.|economy|3
+mature|adj|зрелый|fully grown or sensible|She is mature for her age.|general|2
+mechanism|n|механизм|a system of parts or a way something works|The body has a mechanism to cool itself.|science|2
+mediate|v|посредничать|to help settle a dispute|A neutral party mediated the talks.|society|3
+migrate|v|мигрировать|to move to another region|Birds migrate south in winter.|environment|2
+minimise|v|минимизировать|to reduce to the smallest amount|We should minimise waste.|environment|2
+modify|v|изменять|to change slightly|The design was modified.|general|2
+monitor|v|наблюдать, контролировать|to watch and check over time|Doctors monitor the patient closely.|health|1
+motivate|v|мотивировать|to make someone want to do something|Good teachers motivate students.|education|1
+negligible|adj|ничтожный|so small it is not important|The difference is negligible.|academic|3
+neutral|adj|нейтральный|not supporting either side|The country remained neutral.|society|2
+norm|n|норма|a standard or typical behaviour|Remote work is now the norm.|society|2
+notion|n|представление|an idea or belief|The notion of fairness differs.|academic|2
+objective|adj|объективный|based on facts, not feelings|Try to be objective.|academic|2
+obsolete|adj|устаревший|no longer used|Typewriters are now obsolete.|science|3
+obtain|v|получать|to get|She obtained a degree in law.|general|1
+obvious|adj|очевидный|easy to see or understand|The answer is obvious.|general|1
+occupy|v|занимать|to fill or take up|The factory occupies a large site.|general|2
+offset|v|компенсировать|to balance the effect of|Savings offset the higher costs.|economy|3
+ongoing|adj|продолжающийся|still happening|There is an ongoing investigation.|general|2
+orient|v|ориентировать|to direct toward a goal|The course is oriented to beginners.|education|3
+outcome|n|результат|the final result|The outcome of the vote was clear.|general|1
+overcome|v|преодолевать|to successfully deal with|She overcame her fear of speaking.|general|1
+overlap|v|частично совпадать|to cover part of the same area|The two topics overlap.|academic|3
+paradigm|n|парадигма|a typical model or pattern|A paradigm shift in medicine.|academic|3
+parallel|adj|параллельный|similar or happening side by side|There are parallel developments in Asia.|academic|2
+participate|v|участвовать|to take part|Everyone should participate in class.|education|1
+perceive|v|воспринимать|to see or understand in a particular way|Many perceive the exam as unfair.|academic|2
+persist|v|упорствовать, сохраняться|to continue despite difficulty|Symptoms persisted for weeks.|general|3
+phenomenon|n|явление|a fact or event that can be observed|Climate change is a global phenomenon.|science|2
+plausible|adj|правдоподобный|seeming reasonable or likely|That is a plausible explanation.|academic|3
+policy|n|политика, курс|a plan of action by an organisation|The school has a strict policy on phones.|society|1
+portion|n|часть, порция|a part of a whole|A large portion of income goes to rent.|general|2
+potential|n|потенциал|the ability to develop|She has great potential.|general|1
+precise|adj|точный|exact and accurate|Give me the precise time.|academic|2
+predict|v|предсказывать|to say what will happen|Nobody can predict the future.|general|1
+preliminary|adj|предварительный|coming before the main part|Preliminary results look promising.|academic|3
+prevalent|adj|распространённый|widespread at a particular time|Obesity is prevalent in many countries.|health|3
+primary|adj|основной|most important or first|The primary cause was lack of funding.|general|1
+principle|n|принцип|a basic rule or belief|The principle of equality.|academic|1
+prior|adj|предшествующий|earlier in time|Prior experience is required.|general|2
+priority|n|приоритет|something most important|Safety is our top priority.|general|1
+proceed|v|продолжать|to continue or go forward|Please proceed to gate 5.|general|2
+prohibit|v|запрещать|to officially forbid|Smoking is prohibited here.|society|3
+prominent|adj|выдающийся, заметный|important or easily seen|A prominent scientist.|society|3
+promote|v|продвигать, содействовать|to encourage or advertise|The campaign promotes healthy eating.|general|1
+proportion|n|доля, пропорция|a part in relation to the whole|A small proportion of students failed.|academic|2
+prospect|n|перспектива|a possibility of something good|The prospect of promotion excited him.|general|3
+psychology|n|психология|the study of the mind|She studies psychology at university.|science|1
+pursue|v|стремиться, заниматься|to follow or try to achieve|He pursued a career in medicine.|general|2
+random|adj|случайный|happening without a plan|Participants were chosen at random.|science|2
+rational|adj|рациональный|based on reason|A rational decision.|academic|3
+rebuild|v|восстанавливать|to build again|The town was rebuilt after the war.|general|1
+reinforce|v|укреплять|to make stronger|The results reinforce our belief.|academic|3
+reject|v|отвергать|to refuse to accept|The committee rejected the proposal.|general|1
+relevant|adj|уместный|connected to the subject|Only include relevant details.|academic|1
+reliable|adj|надёжный|able to be trusted|A reliable source of information.|general|1
+reluctant|adj|неохотный|not willing|She was reluctant to speak.|general|3
+rely|v|полагаться|to depend on|We rely on technology every day.|general|1
+remote|adj|отдалённый; удалённый|far away or from a distance|They live in a remote village.|general|2
+renewable|adj|возобновляемый|able to be replaced naturally|Wind is a renewable resource.|environment|2
+replace|v|заменять|to take the place of|Robots may replace workers.|general|1
+represent|v|представлять|to be or act for|The graph represents annual sales.|academic|1
+resident|n|житель|a person living in a place|Local residents opposed the plan.|society|2
+resolve|v|разрешать|to find a solution|They resolved the dispute.|general|2
+restrict|v|ограничивать|to limit|Access is restricted to staff.|general|2
+retain|v|сохранять|to keep|Good teachers retain students' attention.|general|3
+reveal|v|раскрывать|to make known|The survey revealed surprising results.|general|1
+reverse|v|поворачивать вспять|to change to the opposite|The court reversed the decision.|general|2
+revolution|n|революция|a big change in ideas or society|The Industrial Revolution changed Britain.|society|2
+rigid|adj|жёсткий|stiff or not flexible|Rigid rules discourage creativity.|general|3
+scarce|adj|дефицитный|not enough in supply|Water is scarce in the desert.|environment|3
+scenario|n|сценарий|a possible situation|In the worst scenario, prices double.|general|2
+sceptical|adj|скептический|doubtful|Scientists are sceptical about the claim.|academic|3
+sector|n|сектор|a part of the economy|The service sector is growing.|economy|2
+secure|adj|безопасный|safe and protected|Keep your data secure.|general|2
+sequence|n|последовательность|a series of things in order|Follow the sequence of steps.|academic|2
+shift|n|сдвиг, изменение|a change in position or attitude|A shift in public opinion.|general|2
+significant|adj|значительный|important or large|A significant increase in sales.|general|1
+similar|adj|похожий|almost the same|The two cities are similar in size.|general|1
+simulate|v|имитировать|to copy conditions|Pilots train on simulated flights.|science|3
+sophisticated|adj|сложный, изощрённый|advanced or complex|Sophisticated technology.|science|3
+specific|adj|конкретный|clear and exact|Give me a specific example.|academic|1
+speculate|v|строить предположения|to guess without full facts|Experts speculate about the cause.|academic|3
+stable|adj|устойчивый|not likely to change or fall|The economy is stable.|economy|2
+stimulate|v|стимулировать|to encourage activity|Exercise stimulates the brain.|general|2
+strategy|n|стратегия|a plan to achieve a goal|A marketing strategy.|general|1
+subsequent|adj|последующий|coming after|Subsequent events proved him right.|academic|3
+substantial|adj|существенный|large in amount|A substantial improvement.|general|2
+substitute|v|заменять|to use instead of something else|Substitute honey for sugar.|general|2
+sufficient|adj|достаточный|enough|There is sufficient evidence.|general|2
+supplement|n|добавка, дополнение|something added to complete|Vitamin supplements.|health|3
+suppress|v|подавлять|to stop or hold back|The government suppressed the protest.|society|3
+survive|v|выживать|to continue to live|Few animals survive in the desert.|environment|1
+sustain|v|поддерживать|to keep going|The economy cannot sustain such growth.|environment|3
+symbolise|v|символизировать|to represent an idea|The dove symbolises peace.|culture|2
+tackle|v|решать, бороться с|to try to deal with|Governments must tackle unemployment.|society|2
+tendency|n|тенденция|a habit of behaving in a way|A tendency to procrastinate.|general|2
+terminate|v|прекращать|to end|The contract was terminated.|general|3
+theory|n|теория|an idea that explains something|The theory of evolution.|science|1
+thorough|adj|тщательный|complete and careful|A thorough investigation.|general|2
+tolerate|v|терпеть, допускать|to accept without complaint|I can't tolerate noise.|society|2
+transform|v|преобразовывать|to change completely|Technology transformed communication.|general|2
+transparent|adj|прозрачный; открытый|easy to see through or honest|The process should be transparent.|society|3
+trigger|v|вызывать, запускать|to cause something to start|Dust can trigger allergies.|health|2
+ultimate|adj|окончательный|final or greatest|Our ultimate goal is success.|general|2
+undergo|v|проходить, испытывать|to experience a change|She underwent surgery.|health|2
+undermine|v|подрывать|to weaken gradually|Rumours undermined his authority.|society|3
+unique|adj|уникальный|being the only one of its kind|Each fingerprint is unique.|general|1
+utilise|v|использовать|to make use of|Schools utilise online tools.|academic|3
+valid|adj|обоснованный, действительный|logical or legally acceptable|A valid argument.|academic|2
+vary|v|меняться, различаться|to be different or change|Prices vary between shops.|general|1
+vast|adj|обширный|extremely large|A vast area of forest.|general|2
+verify|v|проверять, подтверждать|to check that something is true|Please verify your email address.|academic|3
+viable|adj|жизнеспособный|able to work successfully|A viable alternative.|economy|3
+vital|adj|жизненно важный|absolutely necessary|Water is vital for life.|general|1
+voluntary|adj|добровольный|done by choice|Voluntary work in hospitals.|society|2
+vulnerable|adj|уязвимый|easily harmed|Young children are vulnerable.|society|3
+widespread|adj|широко распространённый|existing in many places|Widespread support for the plan.|general|2
+withdraw|v|отзывать, снимать|to remove or take back|She withdrew her application.|general|3
