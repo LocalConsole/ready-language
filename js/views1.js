@@ -202,7 +202,6 @@ V.reader=async function(root,id){const s=S();
  async function lookup(el){const raw=el.textContent,lw=App.lemma(raw);const box=$('#wp');box.innerHTML=`<div class="pop"><div class="skel"></div><div class="skel" style="width:60%"></div></div>`;
   let info=lw?{w:lw.w,tr:lw.tr,def:lw.def,pos:lw.pos,ex:lw.ex,ipa:'',local:1,id:lw.id}:null;
   if(!info){const r=await AI.wordInfo(raw);if(r)info={w:raw.toLowerCase(),tr:r.tr,def:r.def,pos:r.pos,ex:r.ex,ipa:r.ipa,mn:r.mnemonic}}
-  else if(AI.available()&&!info.ipa){AI.wordInfo(info.w).then(r=>{if(r&&r.ipa){const e=$('#ipa');if(e)e.textContent=r.ipa}})}
   const inS=info&&info.id&&s.cards[info.id];
   box.innerHTML=`<div class="pop" role="dialog" aria-label="Слово"><div class="row"><h2 style="margin:0">${esc(info?info.w:raw)}</h2><span class="small mute" id="ipa">${esc(info&&info.ipa||'')}</span><span class="small mute">${esc(info&&info.pos||'')}</span><span class="sp"></span><button class="btn alt sm" id="ps">🔊</button><button class="btn alt sm" id="pc" aria-label="Закрыть">✕</button></div>
   ${info?`<p><b>${esc(info.tr||'')}</b><br>${esc(info.def||'')}${info.ex?`<br><i class="mute">${esc(info.ex)}</i>`:''}</p>${info.mn?`<p class="small">💡 ${esc(info.mn)}</p>`:''}<p class="small">${App.morph(info.w)}</p><button class="btn" id="pa">${inS?'✓ В моих словах':'＋ '+t('addWord')}</button>`
