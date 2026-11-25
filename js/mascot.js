@@ -21,7 +21,7 @@ function mouth(s){
 }
 function arms(s){
   const c='#8b5a2b';
-  const arm=(x,y,rot,cls='')=>`<g class="${cls}" style="transform:rotate(${rot}deg);transform-origin:${x}px ${y}px"><ellipse cx="${x}" cy="${y+16}" rx="11" ry="22" fill="${c}"/><circle cx="${x}" cy="${y+36}" r="9" fill="#9a6432"/></g>`;
+  const arm=(x,y,rot,cls='')=>`<g style="transform:rotate(${rot}deg);transform-origin:${x}px ${y}px"><g class="${cls}" style="transform-origin:${x}px ${y}px;transform-box:view-box"><ellipse cx="${x}" cy="${y+16}" rx="11" ry="22" fill="${c}"/><circle cx="${x}" cy="${y+36}" r="9" fill="#9a6432"/></g></g>`;
   switch(s){
     case 'hello':return arm(46,118,24)+arm(154,118,-150,'m-wave');
     case 'celebrate':return arm(46,118,150,'m-jump')+arm(154,118,-150,'m-jump');

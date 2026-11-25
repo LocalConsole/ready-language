@@ -70,12 +70,12 @@ const Plan={
   const li=ex.filter(e=>e.type==='ielts').slice(-1)[0],ls=ex.filter(e=>e.type==='sat').slice(-1)[0];
   band=li?li.band:d&&d.band!=null?d.band:null;sat=ls?ls.sat:d&&d.sat!=null?d.sat:null;return {band,sat}},
  hoursNeeded(){const p=S.profile;if(!p)return 0;const e=this.est();let h=0;
-  if(p.goal.ielts){const cur=e.band==null?3.5:e.band;h+=Math.max(0,p.goal.ielts-cur)*90}
+  if(p.goal.ielts){const cur=e.band==null?3.5:e.band;h+=Math.max(0,p.goal.ielts-cur)*70}
   if(p.goal.sat){const cur=e.sat==null?900:e.sat;h+=Math.max(0,p.goal.sat-cur)/100*35}
   return Math.max(h,6)},
  studiedHours(){return (Object.values(S.daily).reduce((a,d)=>a+(d.min||0),0))/60},
  daysLeft(){const p=S.profile;if(!p)return 0;const ds=[p.dates&&p.dates.ielts,p.dates&&p.dates.sat].filter(Boolean).sort();return ds.length?Math.max(1,dayDiff(today(),ds[0])):90},
- minutesPerDay(){const left=Math.max(this.hoursNeeded()-this.studiedHours()*0.8,2)*60;return Math.min(180,Math.max(15,Math.ceil(left/this.daysLeft())))},
+ minutesPerDay(){const left=Math.max(this.hoursNeeded()-this.studiedHours()*0.8,2)*60;return Math.min(120,Math.max(15,Math.ceil(left/this.daysLeft())))},
  todayMin(){return (S.daily[today()]||{}).min||0}};
 /* ---- Уровень по результату диагностики ---- */
 const Level={cefr(a){return a<.2?'A1':a<.38?'A2':a<.55?'B1':a<.72?'B2':a<.87?'C1':'C2'},

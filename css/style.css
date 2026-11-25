@@ -35,15 +35,15 @@ label{display:block;font-weight:600;margin:.6rem 0 .25rem}
 .bar{height:10px;background:var(--soft);border-radius:99px;overflow:hidden}.bar>i{display:block;height:100%;background:linear-gradient(90deg,var(--teal),var(--ok));border-radius:99px;transition:width .8s cubic-bezier(.2,.8,.2,1)}
 /* mascot */
 .misha{display:block}.misha svg{width:100%;height:auto;overflow:visible}
-.say{display:flex;gap:1rem;align-items:flex-end}
+.say{display:flex;gap:1rem;align-items:center;margin-bottom:.9rem}
 .say .misha{width:130px;flex:none}
 .bubble{position:relative;background:var(--card);border:2px solid var(--line);border-radius:18px;padding:.8rem 1rem;box-shadow:var(--sh);animation:pop .4s cubic-bezier(.2,1.4,.4,1)}
 .bubble:before{content:"";position:absolute;left:-10px;bottom:22px;width:16px;height:16px;background:var(--card);border-left:2px solid var(--line);border-bottom:2px solid var(--line);transform:rotate(45deg)}
 @keyframes pop{from{transform:scale(.85);opacity:0}to{transform:none;opacity:1}}
 .m-bob{animation:bob 3.2s ease-in-out infinite}@keyframes bob{50%{transform:translateY(-4px)}}
-.m-wave{transform-box:fill-box;transform-origin:20% 90%;animation:wave 1s ease-in-out infinite}@keyframes wave{50%{transform:rotate(-22deg)}}
+.m-wave{animation:wave 1s ease-in-out infinite}@keyframes wave{50%{transform:rotate(-18deg)}}
 .m-blink{transform-box:fill-box;transform-origin:center;animation:blink 4s infinite}@keyframes blink{0%,94%,100%{transform:scaleY(1)}97%{transform:scaleY(.1)}}
-.m-jump{animation:jump .7s ease-in-out infinite}@keyframes jump{40%{transform:translateY(-14px)}}
+.m-jump{animation:jump .7s ease-in-out infinite}@keyframes jump{40%{transform:translateY(-10px)}}
 .m-shake{animation:shake .5s ease-in-out 2}@keyframes shake{25%{transform:translateX(-4px)}75%{transform:translateX(4px)}}
 .m-steam{animation:steam 2.4s ease-in-out infinite}@keyframes steam{from{opacity:.8;transform:translateY(0)}to{opacity:0;transform:translateY(-14px)}}
 .m-think{animation:think 1.6s ease-in-out infinite}@keyframes think{50%{opacity:.35}}
@@ -80,7 +80,7 @@ label{display:block;font-weight:600;margin:.6rem 0 .25rem}
 .pop{position:fixed;left:50%;bottom:0;transform:translateX(-50%);width:min(560px,100%);background:var(--card);border:2px solid var(--line);border-radius:20px 20px 0 0;padding:1rem 1.2rem 1.4rem;box-shadow:0 -10px 40px rgba(0,0,0,.25);z-index:40;animation:up .25s}
 @keyframes up{from{transform:translate(-50%,40px);opacity:0}}
 .tbl{width:100%;border-collapse:collapse}.tbl td,.tbl th{padding:.4rem .5rem;border-bottom:1px solid var(--line);text-align:left}
-.heat{display:grid;grid-auto-flow:column;grid-template-rows:repeat(7,14px);gap:3px}.heat i{width:14px;height:14px;border-radius:3px;background:var(--soft)}
+.heat{display:grid;grid-auto-flow:column;grid-auto-columns:14px;justify-content:start;grid-template-rows:repeat(7,14px);gap:3px}.heat i{width:14px;height:14px;border-radius:3px;background:var(--soft)}
 .heat i[data-l="1"]{background:#cfe9d6}.heat i[data-l="2"]{background:#8fcea3}.heat i[data-l="3"]{background:#4fae6f}.heat i[data-l="4"]{background:#2c7a46}
 .toast{position:fixed;left:50%;top:70px;transform:translateX(-50%);background:var(--ink);color:var(--bg);padding:.6rem 1rem;border-radius:12px;z-index:60;animation:pop .3s;max-width:90vw}
 #confetti{position:fixed;inset:0;pointer-events:none;z-index:70}
@@ -95,3 +95,5 @@ label{display:block;font-weight:600;margin:.6rem 0 .25rem}
 .say .misha{width:96px}.node{width:92%!important;margin-left:4%!important}}
 body.lite *,body.reduce *{animation-duration:.001s!important;animation-iteration-count:1!important;transition-duration:.001s!important}
 @media(prefers-reduced-motion:reduce){*{animation-duration:.001s!important;animation-iteration-count:1!important;transition-duration:.001s!important}}
+
+input[type=range],input[type=checkbox]{accent-color:var(--brand)}
