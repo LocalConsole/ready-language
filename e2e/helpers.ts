@@ -78,10 +78,8 @@ export async function answerQuiz(page: Page, o: { n?: number; pick?: number | 'r
   const n = o.n ?? 60;
   for (let i = 0; i < n; i++) {
     const go = page.getByTestId('quiz-go');
-    if (!(await go.isVisible().catch(() => false))) {
-      await page.waitForTimeout(150);
-      if (!(await go.isVisible().catch(() => false))) return i;
-    }
+    const appeared = await go.waitFor({ state: 'visible', timeout: i === 0 ? 8000 : 700 }).then(() => true, () => false);
+    if (!appeared) return i;
     const opts = page.locator('.opt');
     if (await opts.count()) {
       const k = typeof o.pick === 'number' ? o.pick : 0;

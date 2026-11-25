@@ -163,3 +163,4 @@ main:focus{outline:none}
 .opt:disabled:hover{transform:none}
 .bar>i{width:0}
 .pop.reader-pop{position:fixed}
+.fc>div{transition:none}
