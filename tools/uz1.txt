@@ -1,0 +1,220 @@
+Миша — IELTS &amp; SAT от нуля до экзамена ⇒ Misha — IELTS &amp; SAT noldan imtihongacha
+Перейти к содержимому ⇒ Mazmunga o'tish
+Миша — главная ⇒ Misha — bosh sahifa
+Миша ⇒ Misha
+Опыт ⇒ Tajriba
+Статус ИИ ⇒ SI holati
+ИИ ⇒ SI
+Основное ⇒ Asosiy
+Для работы сайта нужен JavaScript. ⇒ Sayt ishlashi uchun JavaScript kerak.
+Главная ⇒ Bosh sahifa
+Путь ⇒ Yo'l
+Практика ⇒ Mashq
+Экзамен ⇒ Imtihon
+Профиль ⇒ Profil
+Прогресс ⇒ Natijalar
+Настройки ⇒ Sozlamalar
+Журнал ошибок ⇒ Xatolar jurnali
+Откуда материалы ⇒ Materiallar manbasi
+Начать ⇒ Boshlash
+Дальше ⇒ Keyingisi
+Назад ⇒ Orqaga
+Проверить ⇒ Tekshirish
+Пропустить ⇒ O'tkazib yuborish
+Завершить ⇒ Yakunlash
+Ещё раз ⇒ Yana bir bor
+Закрыть ⇒ Yopish
+Сохранить ⇒ Saqlash
+Миссия дня ⇒ Kun vazifasi
+Серия ⇒ Seriya
+дней до экзамена ⇒ kun imtihongacha
+мин в день ⇒ daqiqa kuniga
+Твоя цель ⇒ Maqsading
+Начать с нуля ⇒ Noldan boshlash
+Пройти диагностику ⇒ Diagnostikadan o'tish
+Миша ищет нужную страницу… ⇒ Misha kerakli sahifani qidiryapti…
+Верно! ⇒ To'g'ri!
+Неверно ⇒ Noto'g'ri
+Твой ответ ⇒ Sening javobing
+Правильный ответ ⇒ To'g'ri javob
+Почему так ⇒ Nega shunday
+Почему твой вариант не подходит ⇒ Nega sening variant mos kelmaydi
+Теперь попробуй сам ⇒ Endi o'zing urinib ko'r
+Понял ⇒ Tushundim
+Объясни проще ⇒ Soddaroq tushuntir
+В журнал ошибок ⇒ Xatolar jurnaliga
+В журнале ⇒ Jurnalda
+Тема ⇒ Mavzu
+Светлая ⇒ Yorug'
+Тёмная ⇒ Qorong'i
+Язык интерфейса ⇒ Interfeys tili
+Звуки ⇒ Tovushlar
+Крупный шрифт ⇒ Yirik shrift
+Режим для дислексии ⇒ Disleksiya rejimi
+Меньше анимации ⇒ Animatsiya kamroq
+Экспорт прогресса ⇒ Natijalarni eksport qilish
+Импорт прогресса ⇒ Natijalarni import qilish
+Сбросить всё ⇒ Hammasini tozalash
+ИИ-ключи (хранятся только на этом устройстве) ⇒ SI kalitlari (faqat shu qurilmada saqlanadi)
+ИИ недоступен — работаю на локальной базе ⇒ SI mavjud emas — mahalliy bazadan foydalanyapman
+Слова ⇒ So'zlar
+Карточки ⇒ Kartochkalar
+Читалка ⇒ O'qish
+Книги ⇒ Kitoblar
+В мои слова ⇒ Mening so'zlarimga
+Разбор ошибок с Мишей ⇒ Mishа bilan xatolar tahlili
+Результат ⇒ Natija
+Общий ⇒ Umumiy
+Привет! Я Миша. Сам когда-то зубрил английский под гул самовара — теперь помогаю тебе. ⇒ Salom! Men Mishaman. O'zim ham bir vaqtlar samovar shovqini ostida ingliz tilini yodlaganman — endi senga yordam beraman.
+Здравствуй! Начнём? Чай остынет — а слова нет. ⇒ Assalomu alaykum! Boshlaymizmi? Choy sovib qoladi — so'zlar esa yo'q.
+О, ты пришёл! Давай по чуть-чуть, но каждый день. ⇒ Oh, kelding! Oz-ozdan, lekin har kuni shug'ullanamiz.
+Хм… дай-ка подумаю. ⇒ Hm… bir o'ylab ko'ray.
+Так-так… тут есть ловушка. ⇒ Mana-mana… bu yerda tuzoq bor.
+Прочитай ещё раз — внимательно, как письмо из дома. ⇒ Yana bir o'qi — e'tibor bilan, uydan kelgan xat kabi.
+Отлично! Так держать. ⇒ Zo'r! Shunday davom et.
+Верно! Медведь доволен. ⇒ To'g'ri! Ayiq xursand.
+Чистая работа! ⇒ Top-toza ish!
+Вот это по-нашему! ⇒ Mana shunday bo'lsin!
+Ничего страшного — ошибки это тоже конспект. ⇒ Zarari yo'q — xatolar ham konspekt hisoblanadi.
+Бывает. Разберём вместе — и больше не повторится. ⇒ Bo'ladi. Birga tahlil qilamiz — endi takrorlanmaydi.
+Не вешай нос: на ошибках и учатся. ⇒ Tushkunlikka tushma: xatolardan o'rganiladi.
+Ты справишься! Я в тебя верю. ⇒ Uddalaysan! Senga ishonaman.
+Ещё чуть-чуть. Терпение и труд — и band растёт. ⇒ Yana ozgina. Sabr va mehnat — band ham oshadi.
+Давай, шаг за шагом. ⇒ Qani, qadam-baqadam.
+Смотри на доску — тут самое важное. ⇒ Doskaga qara — eng muhimi shu yerda.
+Запоминай схему: она выручит на экзамене. ⇒ Sxemani yodla: imtihonda qo'l keladi.
+Ура-а! Самовар на стол! ⇒ Ura-a! Samovarni dasturxonga!
+Победа! Конфетти за мой счёт. ⇒ G'alaba! Konfetti mendan.
+Это достойно пирога! ⇒ Bu pirog arziydi!
+Сейчас объясню, в чём подвох. ⇒ Hozir tuzoq nimada ekanini tushuntiraman.
+Тут все спотыкаются — смотри, как это устроено. ⇒ Bu yerda hamma qoqiladi — qara, bu qanday ishlaydi.
+Первый урок ⇒ Birinchi dars
+3 дня подряд ⇒ Ketma-ket 3 kun
+7 дней подряд (самовар!) ⇒ Ketma-ket 7 kun (samovar!)
+50 слов в SRS ⇒ SRS da 50 ta so'z
+Первый пробный экзамен ⇒ Birinchi sinov imtihoni
+Тест без ошибок ⇒ Xatosiz test
+Диагностика пройдена ⇒ Diagnostika tugadi
+Первое Writing ⇒ Birinchi Writing
+Первое Speaking ⇒ Birinchi Speaking
+Уровень 5 — новая шапка ⇒ 5-daraja — yangi telpak
+🏆 Достижение: ⇒ 🏆 Yutuq:
+❄️ Заморозка серии спасла ⇒ ❄️ Seriyani muzlatish saqlab qoldi
+дн. ⇒ kun
+⭐ Уровень ⇒ ⭐ Daraja
+! Миша получил обновку. ⇒ ! Misha yangi kiyim oldi.
+существительное ⇒ ot
+глагол ⇒ fe'l
+прилагательное ⇒ sifat
+наречие ⇒ ravish
+Пример: ⇒ Misol:
+Словарь ⇒ Lug'at
+Как по-английски: « ⇒ Inglizchada qanday: «
+» означает: ⇒ » degani:
+Что означает слово « ⇒ «
+» — это перевод слова « ⇒ » — bu quyidagi so'zning tarjimasi: «
+) не подходит по смыслу. ⇒ ) ma'no jihatidan mos kelmaydi.
+Выбери правильное написание: ⇒ To'g'ri yozilishini tanla:
+Неверное написание. Правильно: ⇒ Imlo noto'g'ri. To'g'risi:
+Послушай слово и напиши его ⇒ So'zni eshitib, yoz
+Составь предложение со словом « ⇒ Quyidagi so'z bilan gap tuz: «
+Разбор ⇒ Tahlil
+Вопрос ⇒ Savol
+из ⇒ /
+▶ Слушать ⇒ ▶ Tinglash
+⏹ Стоп ⇒ ⏹ To'xtatish
+можно переслушать ⇒ qayta tinglash mumkin
+субтитры ⇒ subtitr
+🔊 Слушать слово ⇒ 🔊 So'zni tinglash
+Ответ ⇒ Javob
+Твой ответ… ⇒ Sening javobing…
+Подсказка: ⇒ Maslahat:
+🔊 Играет… ⇒ 🔊 Eshittirilmoqda…
+▶ Ещё раз ⇒ ▶ Yana bir bor
+Ошибок нет — разбирать нечего. Редкая чистота! ⇒ Xato yo'q — tahlil qiladigan narsa yo'q. Kamdan-kam toza natija!
+На главную ⇒ Bosh sahifaga
+· ошибок: ⇒ · xatolar:
+. Ни одна не пропускается — просмотри все по порядку. ⇒ . Birortasi ham o'tkazib yuborilmaydi — hammasini tartib bilan ko'rib chiq.
+Навык ⇒ Ko'nikma
+Все навыки ⇒ Barcha ko'nikmalar
+Все темы ⇒ Barcha mavzular
+Ошибка ⇒ Xato
+Готово — на главную ⇒ Tayyor — bosh sahifaga
+Разберём предложение построчно. ⇒ Gapni qismlarga bo'lib tahlil qilamiz.
+Исправление ⇒ Tuzatish
+— (пропущено) ⇒ — (o'tkazib yuborilgan)
+· источник: ⇒ · manba:
+Почему именно так ⇒ Aynan nega shunday
+Ответ не совпал с эталоном — сверь написание/смысл. ⇒ Javob namunaga mos kelmadi — imlo va ma'noni solishtir.
+Вариант не выбран — на экзамене лучше всегда выбирать наиболее вероятный ответ. ⇒ Variant tanlanmagan — imtihonda eng ehtimolli javobni tanlagan ma'qul.
+» не подходит — сравни с правилом в пункте 3. ⇒ » mos kelmaydi — 3-bandagi qoida bilan solishtir.
+Аудио и транскрипт ⇒ Audio va transkript
+▶ Прослушать фрагмент ⇒ ▶ Parchani tinglash
+Где в тексте: ⇒ Matnning qayerida:
+Нажми «Попробуй сам» — Миша даст похожий вопрос, чтобы закрепить. ⇒ «O'zing urinib ko'r» ni bos — Misha mustahkamlash uchun o'xshash savol beradi.
+Отмечено ✓ ⇒ Belgilandi ✓
+. Упрощённо: ⇒ . Soddalashtirilgan:
+Похожих заданий пока нет. Загляни в уроки по теме. ⇒ O'xshash topshiriqlar hozircha yo'q. Mavzu bo'yicha darslarni ko'r.
+Теперь сам ⇒ Endi o'zing
+🎉 Получилось! Тема закрепляется. ⇒ 🎉 Uddalading! Mavzu mustahkamlanyapti.
+Ничего, она вернётся в повторение — ошибка уже в журнале. ⇒ Zarari yo'q, takrorlashga qaytadi — xato allaqachon jurnalda.
+🎯 Ещё один похожий ⇒ 🎯 Yana bitta o'xshash
+Артикли ⇒ Artikllar
+Условные ⇒ Shart gaplar
+Пассив ⇒ Majhul nisbat
+Предлоги ⇒ Predloglar
+Относительные придаточные ⇒ Aniqlovchi ergash gaplar
+Модальные глаголы ⇒ Modal fe'llar
+Согласование ⇒ Moslashuv
+Косвенная речь ⇒ Ko'chirma gap
+Степени сравнения ⇒ Qiyosiy darajalar
+Герундий / инфинитив ⇒ Gerundiy / infinitiv
+Reading: выбор ответа ⇒ Reading: javob tanlash
+Reading: заголовки ⇒ Reading: sarlavhalar
+Listening: форма ⇒ Listening: shaklni to'ldirish
+Listening: лекции ⇒ Listening: ma'ruzalar
+SAT: связки ⇒ SAT: bog'lovchilar
+SAT: границы предложений ⇒ SAT: gap chegaralari
+SAT: слова в контексте ⇒ SAT: kontekstdagi so'zlar
+SAT: краткость ⇒ SAT: ixchamlik
+Math: линейные ур-я ⇒ Math: chiziqli tenglamalar
+Math: квадраты и функции ⇒ Math: kvadratlar va funksiyalar
+Math: проценты и отношения ⇒ Math: foizlar va nisbatlar
+Math: геометрия ⇒ Math: geometriya
+Что-то пошло не так, но я уже чиню. ⇒ Nimadir xato ketdi, lekin men allaqachon tuzatyapman.
+Повтори слова: ⇒ So'zlarni takrorla:
+к повторению ⇒ takrorlash uchun
+Выучи 5 новых слов ⇒ 5 ta yangi so'z o'rgan
+≈ 5 мин ⇒ ≈ 5 daq
+Урок: ⇒ Dars:
+Все уроки пройдены! ⇒ Barcha darslar tugadi!
+мин ⇒ daq
+Запусти пробный экзамен ⇒ Sinov imtihonini boshla
+Разбери ошибки (3 из журнала) ⇒ Xatolarni tahlil qil (jurnaldan 3 ta)
+Быстрый тест на 5 вопросов ⇒ 5 savolli tezkor test
+Миссия дня выполнена! Самовар на стол. ⇒ Kun vazifasi bajarildi! Samovarni dasturxonga.
+Серия прервалась… но мы начнём новую. Я никуда не ушёл. ⇒ Seriya uzildi… lekin yangisini boshlaymiz. Men hech qayoqqa ketganim yo'q.
+Давай начнём с миссии дня — всего 15–20 минут. ⇒ Kun vazifasidan boshlaymiz — atigi 15–20 daqiqa.
+Сегодня ⇒ Bugun
+цель ⇒ maqsad
+Уровень ⇒ Daraja
+❄️ заморозок: ⇒ ❄️ muzlatishlar:
+· сейчас ≈ ⇒ · hozir ≈
+экзамен: ⇒ imtihon:
+· нужно ≈ ⇒ · kerak ≈
+Нагрузка высокая — если нереально, отодвинь дату или снизь цель (Профиль → Изменить цель). ⇒ Yuklama yuqori — agar real bo'lmasa, sanani surib qo'y yoki maqsadni pasaytir (Profil → Maqsadni o'zgartirish).
+Прогноз и график ⇒ Prognoz va grafik
+Быстрый доступ ⇒ Tezkor kirish
+📚 Слова ⇒ 📚 So'zlar
+📖 Читалка ⇒ 📖 O'qish
+🎧 Диктант ⇒ 🎧 Diktant
+📓 Ошибки ⇒ 📓 Xatolar
+🧭 Пройти диагностику ⇒ 🧭 Diagnostikadan o'tish
+Привет! Я Миша — бывший двоечник, ныне преподаватель. Выбери, к чему готовимся. ⇒ Salom! Men Mishaman — sobiq ikkichi, hozir o'qituvchi. Nimaga tayyorlanishni tanla.
+Цель ⇒ Maqsad
+Русский ⇒ Ruscha
+Выбери хотя бы один экзамен ⇒ Hech bo'lmasa bitta imtihonni tanla
+Поставим цель и дату — по ним посчитаю нагрузку. ⇒ Maqsad va sanani belgilaymiz — yuklamani shunga qarab hisoblayman.
+Дата IELTS ⇒ IELTS sanasi
+SAT цель: ⇒ SAT maqsadi:
+Дата SAT ⇒ SAT sanasi

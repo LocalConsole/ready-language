@@ -5,6 +5,7 @@
   $('#logo-m').innerHTML=Misha.svg('hello',App.outfit(),{still:1}).replace('<svg ','<svg width="34" height="34" ');
   $('#hdr-xp').textContent=App.Store.s.xp;
   $('#ai-ind').onclick=()=>{location.hash='#/settings'};
+  await App.uzInit();
   await App.loadData();
   if(speechSynthesis&&speechSynthesis.onvoiceschanged!==undefined)speechSynthesis.onvoiceschanged=()=>{};
   addEventListener('hashchange',App.route);

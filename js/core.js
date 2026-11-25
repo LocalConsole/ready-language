@@ -25,7 +25,7 @@ const DEF=()=>({v:1,profile:null,xp:0,streak:{count:0,last:null,freezes:1},daily
 let S;
 function load(){try{S=Object.assign(DEF(),JSON.parse(localStorage.getItem('misha.state')||'{}'));S.settings=Object.assign(DEF().settings,S.settings||{});S.settings.keys=Object.assign(DEF().settings.keys,S.settings.keys||{})}catch(e){S=DEF()}return S}
 let saveT;function save(){clearTimeout(saveT);saveT=setTimeout(()=>{try{localStorage.setItem('misha.state',JSON.stringify(S))}catch(e){console.warn('save fail',e)}},120)}
-const Store={get s(){return S},load,save,reset(){S=DEF();localStorage.removeItem('misha.state')},
+const Store={get s(){return S},load,save,flush(){clearTimeout(saveT);try{localStorage.setItem('misha.state',JSON.stringify(S))}catch(e){}},reset(){S=DEF();localStorage.removeItem('misha.state')},
  export(){return JSON.stringify({app:'misha',at:new Date().toISOString(),state:S})},
  import(txt){const o=JSON.parse(txt);if(!o||!o.state)throw new Error('bad file');S=Object.assign(DEF(),o.state);save()}};
 load();

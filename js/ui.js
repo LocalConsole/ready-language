@@ -9,6 +9,7 @@ App.views={};App.token=0;
 App.loadData=async function(){
  const names=['words','questions','lessons','prompts','sources'];
  await Promise.all(names.map(async n=>{const r=await fetch('data/'+n+'.json');if(!r.ok)throw new Error('data/'+n);D[n]=await r.json()}));
+ App.uzData&&App.uzData(D);
  D.q={};D.questions.questions.forEach(q=>D.q[q.id]=q);
  D.passage={};[...D.questions.passages,...D.questions.listening].forEach(p=>D.passage[p.id]=p);
  D.lessonById={};D.lessons.lessons.forEach(l=>D.lessonById[l.id]=l);

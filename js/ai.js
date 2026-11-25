@@ -24,6 +24,7 @@ const AI={cool:{},usage:null,
   const lim=CFG().dailySoftLimit||{};const parts=c.map(p=>{const used=u.n[p]||0,max=lim[p]||200,rem=u.rem[p];return `${P[p].name}: ${rem!=null?rem+' осталось':used+'/'+max}${this.cool[p]>Date.now()?' (отдыхает)':''}`});
   return {ok:this.available(),text:'ИИ '+(this.available()?'●':'○'),detail:parts.join(' · ')}},
  async ask(o){/* o:{system,prompt,json,key,noCache} → {text,from,cached} либо бросает ошибку */
+  if(window.I18N&&I18N.lang==='uz'){o=Object.assign({},o,{system:(o.system||'')+' IMPORTANT: write every explanation, comment, translation and hint in Uzbek (Latin script, o\'zbek tili) instead of Russian. Keep English quotes in English. Translation fields ("tr") must be Uzbek.'})}
   const key='ai:'+hash((o.system||'')+'|'+o.prompt);
   if(!o.noCache){const c=await IDB.get(key);if(c)return {text:c,from:'cache',cached:true}}
   const m={json:o.json,long:!!o.long,messages:[{role:'system',content:o.system||'You are Misha, a friendly Russian bear teaching English for IELTS and SAT. Answer concisely.'},{role:'user',content:o.prompt}]};

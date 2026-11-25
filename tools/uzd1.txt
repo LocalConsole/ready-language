@@ -1,0 +1,150 @@
+0 ⇒ Lug'at
+1 ⇒ Grammatika
+2 ⇒ Ildiz va old qo'shimchalar bo'yicha so'zlar
+3 ⇒ Aksariyat akademik so'zlar <b>ildiz</b> + old qo'shimchalar + suffikslardan tuzilgan.
+4 ⇒ Prefikslar: <b>un-</b> (inkor), <b>re-</b> (qayta), <b>inter-</b> (orasida), <b>sub-</b> (ostida), <b>pre-</b> (oldin).
+5 ⇒ Suffikslar: <b>-tion</b> (ot), <b>-able</b> (mumkin), <b>-ize/-ise</b> (qilmoq), <b>-ive</b> (sifat).
+6 ⇒ Ildizni bilsang — ko'rmagan so'zingni ham taxmin qila olasan.
+7 ⇒ <b>viable</b> ← via (hayot) + -able = «hayotga layoqatli»; <b>interpret</b> ← inter (orasida) + pret (sharhlamoq).
+8 ⇒ Kuniga 5 ta so'z o'rgan, shanbada 50 ta emas: SRS so'zlarni o'z vaqtida qaytaradi.
+9 ⇒ Present Perfect va Past Simple
+10 ⇒ <b>Past Simple</b> — o'tmishdagi aniq vaqt: yesterday, in 2019, last week.
+11 ⇒ <b>Present Perfect</b> — tajriba, natija yoki «hozirgacha» davri: ever, never, already, since, for.
+12 ⇒ Aniq sana bo'lsa — doim Past Simple.
+13 ⇒ Davomli holat uchun: since + nuqta, for + davr.
+14 ⇒ I <b>have visited</b> Paris (tajriba) → I <b>visited</b> Paris <b>in 2019</b> (aniq vaqt).
+15 ⇒ a / an / the artikllari
+16 ⇒ <b>a / an</b> — ko'plardan biri, birinchi marta. Tanlov <b>tovushga</b> qarab: an hour, a university.
+17 ⇒ <b>the</b> — aniq yoki yagona: the Sun, the book we discussed.
+18 ⇒ Artiklsiz — umumiy tushunchalar, sanalmaydigan va ko'plik otlar: I love music.
+19 ⇒ Shart gaplar (0, 1, 2, 3)
+20 ⇒ <b>1-tur</b>: If + Present, will + V → real kelajak.
+21 ⇒ <b>2-tur</b>: If + Past, would + V → nореal hozirgi payt (If I were you…).
+22 ⇒ <b>3-tur</b>: If + Past Perfect, would have + V3 → noreal o'tmish.
+23 ⇒ 1-turda if dan keyin will qo'ymaymiz.
+24 ⇒ Predloglar va turg'un birikmalar
+25 ⇒ Kunlar va sanalar — <b>on</b>; oylar, yillar — <b>in</b>; aniq vaqt — <b>at</b>.
+26 ⇒ Predloglarni <b>fe'l/sifat bilan blok qilib</b> o'rgan: good at, interested in, depend on.
+27 ⇒ <b>True</b> — matn xuddi shuni aytadi (sinonimlar!).
+28 ⇒ <b>False</b> — matn da'voga <b>zid</b>.
+29 ⇒ <b>Not Given</b> — matnda ma'lumot <b>yo'q</b>. Sening bilimlaring hisobga olinmaydi!
+30 ⇒ Tuzoqlar: always / never / all / only so'zlari, taqqoslashlar, sabab va tasodif.
+31 ⇒ Da'vo: «Honeybees are in danger». Matn: «are not endangered» → <b>False</b>. Matn daromadlar haqida hech narsa demaydi → <b>Not Given</b>.
+32 ⇒ Avval matndan o'rinni top. O'rin yo'q bo'lsa — ehtimol Not Given.
+33 ⇒ Reading: tanlov savollari va sarlavhalar
+34 ⇒ Savollardan oldin butun matnni o'qima: <b>skim</b> qil (sarlavha, abzatslarning birinchi gaplari).
+35 ⇒ Javob deyarli doim <b>boshqacha ifodalangan</b> — bir xil so'zlarni emas, sinonimlarni qidir.
+36 ⇒ Noto'g'ri variantlarda ko'pincha matndagi so'zlar bo'ladi, lekin ma'nosi boshqa.
+37 ⇒ Abzats sarlavhasi = uning <b>asosiy fikri</b>, tafsilot emas.
+38 ⇒ Matn: «people who wish to help pollinators should plant native flowers» → «Plant native flowers» varianti (deyarli bir xil so'zlar — lekin kontekstni tekshir).
+39 ⇒ Listening: shakl va tuzoqlar
+40 ⇒ Savollarni oldindan o'qi va <b>javob turini oldindan taxmin qil</b> (raqam, ism, joy).
+41 ⇒ 1-tuzoq: <b>o'zini tuzatish</b> — «five, no, sorry, six».
+42 ⇒ 2-tuzoq: <b>inkor</b> — «not» so'zini o'tkazib yuborish oson.
+43 ⇒ 3-tuzoq: seventeen / seventy raqamlari — urg'uga quloq sol.
+44 ⇒ «…close at five, not six as on the website» → javob <b>5</b>. Aynan oxirgi aniqlik to'g'ri.
+45 ⇒ Listening: ma'ruzalar va asosiy fikr
+46 ⇒ Ma'ruzachi ko'pincha <b>afsonani rad etadi</b> («Many people believe… In fact…»). Javob In fact dan keyin.
+47 ⇒ Signal so'zlar: however, in fact, the main point, what is important.
+48 ⇒ Raqamlar va o'lchov birliklarini yodda tut.
+49 ⇒ «Many people believe… In fact, the main trigger is daylight» → javob: daylight.
+50 ⇒ Writing Task 1: grafik tavsifi
+51 ⇒ Tuzilma: <b>Introduction</b> (topshiriqni boshqacha ayt) → <b>Overview</b> (2 ta asosiy tendensiya, raqamlarsiz) → <b>Body 1</b> va <b>Body 2</b> (ma'lumotlar).
+52 ⇒ Kamida 150 so'z, ~20 daqiqa.
+53 ⇒ Tendensiya leksikasi: rose sharply, fluctuated, remained stable, peaked at, accounted for.
+54 ⇒ Fikr yozma — faqat grafikdagi faktlar.
+55 ⇒ Writing Task 2: insho
+56 ⇒ Kamida 250 so'z, ~40 daqiqa. 4 abzats: <b>Intro / Body 1 / Body 2 / Conclusion</b>.
+57 ⇒ Intro: boshqacha ifoda + <b>thesis</b> (sening pozitsiyang).
+58 ⇒ Bog'lovchilar: Firstly, Moreover, However, As a result — lekin har qatorda emas!
+59 ⇒ Mezonlar: Task Response, Coherence & Cohesion, Lexical Resource, Grammatical Range & Accuracy.
+60 ⇒ <b>Part 1</b> (4–5 daq): shaxsiy mavzular, javob 2–3 gap. Javob + sabab + misol.
+61 ⇒ <b>Part 2</b>: 1 daqiqa tayyorgarlik, 2 daqiqa monolog. Rejadan foydalan: Who/What/When/Where/Why/Feelings.
+62 ⇒ <b>Part 3</b>: mavhum savollar — fikr + sabab + qarama-qarshilik.
+63 ⇒ Matnlarni yodlama: imtihonchi buni sezadi.
+64 ⇒ SAT R&W: o'tish so'zlari
+65 ⇒ Gaplar orasidagi mantiqni aniqla: <b>qarama-qarshilik</b> (However), <b>natija</b> (As a result), <b>misol</b> (For instance), <b>qo'shish</b> (Moreover), <b>vaqt</b> (Subsequently).
+66 ⇒ Avval variantlarni yop va bog'liqlikni o'z so'zlaring bilan ayt.
+67 ⇒ Cheaper panels… ___, many hesitate → <b>However</b> (qarama-qarshilik).
+68 ⇒ SAT R&W: gap chegaralari
+69 ⇒ Ikki mustaqil gapni vergul bilan bog'lab bo'lmaydi (comma splice).
+70 ⇒ Tuzatishlar: nuqta, <b>;</b>, vergul + and/but, ergashtiruvchi bog'lovchi.
+71 ⇒ Qo'shimchalar (along with…) eganing sonini o'zgartirmaydi.
+72 ⇒ Egalik: birlik — company’s, ko'plik — companies’.
+73 ⇒ SAT R&W: kontekstdagi so'zlar va ixchamlik
+74 ⇒ So'z savollarida <b>gap ichidagi maslahatni</b> qidir: although / rather than bog'lovchilari qarama-qarshilik beradi.
+75 ⇒ Ma'no va grammatika saqlansa, eng ixcham variantni tanla.
+76 ⇒ Math: chiziqli tenglamalar va og'ish
+77 ⇒ Tarozidek yech: chapda nima qilsak, o'ngda ham shuni qilamiz.
+78 ⇒ Og'ish: <b>(y₂ − y₁)/(x₂ − x₁)</b>.
+79 ⇒ Sistemalar: qo'shish yoki o'rniga qo'yish.
+80 ⇒ Math: kvadratlar, funksiyalar, darajalar
+81 ⇒ Yoyish: x² + bx + c = (x + p)(x + q), bunda p·q = c, p + q = b.
+82 ⇒ f(3): o'rniga qo'y va amallar tartibiga rioya qil.
+83 ⇒ Darajalar: aᵐ · aⁿ = aᵐ⁺ⁿ.
+84 ⇒ Math: foizlar, nisbatlar, o'rtacha
+85 ⇒ N ning x% i = N · x/100. 25% chegirma → 0,75 ga ko'paytiramiz.
+86 ⇒ Nisbat a:b — jami a+b qism.
+87 ⇒ O'rtacha = yig'indi ÷ soni.
+88 ⇒ Aniq vaqtsiz <b>tajriba</b> haqida gapiramiz → <b>Present Perfect</b> (have been). «three times» so'zi o'tmishdagi aniq daqiqani ko'rsatmaydi.
+89 ⇒ Past Simple aniq vaqt bo'lganda kerak (last year, in 2019).
+90 ⇒ Was going — o'tmishdagi jarayon, tajriba emas.
+91 ⇒ Am going — kelajak/hozirgi payt, «three times» ga mos kelmaydi.
+92 ⇒ Loyihaning originali, 2025
+93 ⇒ <b>since + vaqt nuqtasi</b> → Present Perfect (has lived): harakat o'tmishda boshlangan va hozir ham davom etmoqda.
+94 ⇒ Present Simple since bilan kelmaydi.
+95 ⇒ Past Simple u endi bu yerda yashamasligini bildiradi.
+96 ⇒ Present Continuous davomli holat uchun since bilan ishlatilmaydi.
+97 ⇒ <b>yesterday</b> — o'tmishdagi aniq vaqt. U bilan Present Perfect ishlatib bo'lmaydi, faqat <b>Past Simple</b>.
+98 ⇒ Present Perfect yesterday / last week / in 2010 bilan ishlatilmaydi.
+99 ⇒ Present Simple — muntazam harakatlar, o'tmish emas.
+100 ⇒ Continuous — hozir jarayondagi harakat.
+101 ⇒ Yagona predmetlar (the Moon, the Earth, the Sun) <b>the</b> bilan ishlatiladi.
+102 ⇒ A/an — ko'plardan biri uchun, Oy esa yagona.
+103 ⇒ Moon oldida artikl kerak.
+104 ⇒ Earth oldida ham the kerak.
+105 ⇒ a/an tanlovi <b>tovushga</b> bog'liq, harfga emas. «Honest» unli tovush /ɒ/ bilan boshlanadi (h o'qilmaydi) → <b>an</b>.
+106 ⇒ A — undosh tovush oldida, bu yerda esa h o'qilmaydi.
+107 ⇒ The — aniq, allaqachon ma'lum ayol haqida.
+108 ⇒ Birlikdagi sanaladigan ot oldida artikl kerak.
+109 ⇒ Biror narsa haqida <b>umuman</b> (sanalmaydigan/ko'plik) gapirganda artikl <b>kerak emas</b>.
+110 ⇒ The — aniq musiqa haqida, bu yerda esa umuman musiqa haqida.
+111 ⇒ A — music sanalmaydigan ot.
+112 ⇒ An — music sanalmaydigan ot, uning ustiga undosh bilan boshlanadi.
+113 ⇒ Birinchi tur shart gap: <b>If + Present Simple, will + V</b>. if dan keyin kelasi zamon ishlatilmaydi.
+114 ⇒ After if da will qo'yib bo'lmaydi.
+115 ⇒ Past Simple — bu allaqachon ikkinchi tur (noreal).
+116 ⇒ Would — noreal shart uchun.
+117 ⇒ Ikkinchi tur: <b>If + Past Simple, would + V</b>. Noreal shartlarda I/he/she bilan odatda <b>were</b> ishlatiladi.
+118 ⇒ Present Simple — real shartlar uchun.
+119 ⇒ Was og'zaki nutqda mumkin, lekin imtihonda were yaxshiroq.
+120 ⇒ Be — shakli mos kelmaydi.
+121 ⇒ Uchinchi tur (noreal o'tmish): <b>If + Past Perfect, would have + V3</b>.
+122 ⇒ Would pass — ikkinchi tur.
+123 ⇒ Will pass — real kelajak.
+124 ⇒ Passed — shart mayliga ega emas.
+125 ⇒ Ko'prikni o'zi qurmaydi, uni qurishgan → <b>Passive: was/were + V3</b>. 1990 — o'tmish, demak was built.
+126 ⇒ Was siz Built — to'liqsiz shakl.
+127 ⇒ Has built — aktiv, ega esa bajaruvchi emas.
+128 ⇒ Is building — aktiv hozirgi payt.
+129 ⇒ Til «gapiriladi» (undan foydalanishadi) → <b>Passive Present: is/are + V3</b>.
+130 ⇒ Speaks — aktiv, lekin til gapirmaydi.
+131 ⇒ is siz Spoken — fe'l yo'q.
+132 ⇒ Is speaking — aktiv Continuous.
+133 ⇒ Turg'un birikma: <b>good at</b> + ko'nikma/fan.
+134 ⇒ Good in — xato, garchi nutqda uchrasa ham.
+135 ⇒ On — good bilan kelmaydi.
+136 ⇒ Good for — «foydali».
+137 ⇒ Hafta kunlari va sanalar → <b>on</b>. Oylar/yillar → in. Aniq vaqt → at.
+138 ⇒ In — oylar va yillar uchun.
+139 ⇒ At — aniq vaqt uchun (at 5 pm).
+140 ⇒ By — «muddatga qadar».
+141 ⇒ Turg'un birikma: <b>interested in</b>.
+142 ⇒ On — noto'g'ri birikma.
+143 ⇒ At — good/bad at bilan ishlatiladi.
+144 ⇒ For — «mos keladi».
+145 ⇒ <b>Whose</b> egalikni bildiradi (kimning mashinasi). Who/whom odamni ega/to'ldiruvchi sifatida almashtiradi.
+146 ⇒ Who odamni almashtiradi, lekin «kimning»ni bildirmaydi.
+147 ⇒ Which — narsalar uchun.
+148 ⇒ Whom — to'ldiruvchi, bu yerda esa egalik kerak.
+149 ⇒ Aniqlovchi ergash gapda narsa uchun: <b>that / which</b>.

@@ -1,0 +1,182 @@
+150 ⇒ Who — odamlar uchun.
+151 ⇒ Whose — egalik.
+152 ⇒ What aniqlovchi ergash gapni boshlamaydi.
+153 ⇒ <b>Mustn't</b> = taqiqlangan. <b>Don't have to</b> = shart emas (lekin mumkin). Klassik tuzoq!
+154 ⇒ Don't have to — «majbur emas», lekin ruxsat etilgan.
+155 ⇒ Needn't — kerak emas, lekin taqiqlanmagan.
+156 ⇒ Shouldn't — maslahat, taqiq emas.
+157 ⇒ «Bu ixtiyoriy» → <b>don't have to</b> (majburiyat yo'q).
+158 ⇒ Mustn't — taqiq.
+159 ⇒ Can't — mumkin emas.
+160 ⇒ Shouldn't — tavsiya etilmaydi.
+161 ⇒ <b>The number of</b> + ko'plik → fe'l <b>birlikda</b> («son» haqida gapiramiz). A number of → fe'l ko'plikda.
+162 ⇒ Are — «A number of» dan keyin to'g'ri bo'lardi.
+163 ⇒ Were — o'tgan zamon, kontekstga mos kelmaydi.
+164 ⇒ Have — -ing shakli yo'q.
+165 ⇒ <b>Neither of</b> rasman birlikni talab qiladi: is.
+166 ⇒ Are — og'zaki variant, lekin imtihon qoidani tekshiradi.
+167 ⇒ Were — zamon jihatidan mos kelmaydi.
+168 ⇒ Be — moslashmaydi.
+169 ⇒ Ko'chirma gapda said dan keyin zamon «orqaga suriladi»: is → <b>was</b>.
+170 ⇒ Is — to'g'ri nutq.
+171 ⇒ Has been — surilishga mos kelmaydi.
+172 ⇒ Will be — kelajak.
+173 ⇒ Uzun sifatlar (3+ bo'g'in): <b>more + adj + than</b>.
+174 ⇒ Most — orttirma daraja.
+175 ⇒ Difficulter — bunday shakl yo'q.
+176 ⇒ Ikkilangan qiyoslash mumkin emas.
+177 ⇒ good ning orttirma darajasi → <b>the best</b>.
+178 ⇒ Good — oddiy daraja.
+179 ⇒ Better — qiyosiy daraja (ikkitasi orasida).
+180 ⇒ Most good — noto'g'ri shakl.
+181 ⇒ <b>suggest</b> dan keyin gerundiy ishlatiladi: suggest + V-ing.
+182 ⇒ suggest dan keyin to + V bo'lmaydi.
+183 ⇒ Yalang infinitiv ishlatilmaydi.
+184 ⇒ Shaklda xato.
+185 ⇒ look forward <b>to</b> da — bu predlog, shuning uchun keyin gerundiy keladi.
+186 ⇒ Predlogdan keyin -ing siz infinitiv bo'lmaydi.
+187 ⇒ Saw — o'tgan zamon.
+188 ⇒ Ikkilangan to.
+189 ⇒ Matnda: «once a curiosity, has grown into a popular hobby» → ilgari kamyob edi, hozir keng tarqalgan. Ma'no mos keladi → <b>True</b>.
+190 ⇒ Matn buning aksini aytadi.
+191 ⇒ Matnda ma'lumot bor.
+192 ⇒ Matnda aniq: «Honeybees are not endangered». Da'vo matnga zid → <b>False</b>.
+193 ⇒ Matn buni tasdiqlamaydi.
+194 ⇒ Ma'lumot bor va u da'voga zid.
+195 ⇒ Matnda daromadlar haqida hech narsa yo'q. Tuzoq: asalarilar mavzusi tanish, lekin aynan bu ma'lumot <b>eslatilmagan</b> → <b>Not Given</b>.
+196 ⇒ Daromadlar haqida ma'lumot yo'q.
+197 ⇒ Ma'lumot yo'q — demak zid bo'lishi mumkin emas.
+198 ⇒ Oxirgi gap: «plant native flowers and leave patches of bare soil for solitary bees instead of simply buying a hive».
+199 ⇒ Tadqiqotchilar «instead of simply buying a hive» deyishadi.
+200 ⇒ Matnda bu yo'q.
+201 ⇒ Avval afzalliklar, keyin «However ... hidden cost» → muallif mashhur tendensiyaning teskari tomoni borligini ko'rsatadi.
+202 ⇒ Bu matnning faqat birinchi yarmi.
+203 ⇒ Asal ishlab chiqarish haqida bir og'iz so'z yo'q.
+204 ⇒ Shaharlar faqat misol sifatida tilga olingan.
+205 ⇒ Matnda: ma'lumot uzoq muddatli xotiraga <b>uyqu paytida</b> o'tadi. Da'vo zid → <b>False</b>.
+206 ⇒ Matn buning aksini aytadi.
+207 ⇒ «nearly 40 per cent more pairs» ≈ about 40 per cent → <b>True</b>. «Nearly» va «about» — sinonim yaqinlashishlar.
+208 ⇒ Matn tasdiqlaydi.
+209 ⇒ Ma'lumot bor.
+210 ⇒ Nap hushyorlikni (alertness) yaxshiladi, lekin «little effect on long-term memory». Da'vo zid → <b>False</b>.
+211 ⇒ Matn «little effect» deydi.
+212 ⇒ Matn juft so'zlarni eslab qolish haqida, lekin imtihon baholari haqida hech narsa yo'q → <b>Not Given</b>. O'zingdan to'qima!
+213 ⇒ Baholar haqida ma'lumot yo'q.
+214 ⇒ Abzats uyqu paytida miya ma'lumotni uzoq muddatli xotiraga qanday o'tkazishini tushuntiradi → «How sleep helps memory». Qolgan sarlavhalar faqat tafsilotni yoki mavjud bo'lmagan mavzuni qamrab oladi.
+215 ⇒ Abzats buning aksini aytadi.
+216 ⇒ Tushlar faqat ozgina eslatilgan.
+217 ⇒ Xavflar haqida ma'lumot yo'q.
+218 ⇒ Kalit: «Students pay twelve pounds a year instead of twenty». Tuzoq: £20 — oddiy o'quvchilar uchun narx.
+219 ⇒ Bunday summa aytilmadi.
+220 ⇒ Oddiy narx, talabalar narxi emas.
+221 ⇒ Kalit: «but not a phone bill». «not» so'zini o'tkazib yuborish oson — Listening da inkorlarga e'tibor ber.
+222 ⇒ Qabul qilinadi.
+223 ⇒ Bunday variant aytilmadi.
+224 ⇒ O'zini tuzatish tuzog'i: «six as it says on the website. That's an error» → to'g'risi <b>five</b>. 8 — bu ish kunlari.
+225 ⇒ Bu saytdagi xato.
+226 ⇒ Bu ish kunlari.
+227 ⇒ Aytilmadi.
+228 ⇒ Kalit: «I'll come on Saturday morning».
+229 ⇒ Kalit: «the main trigger is the shortening of daylight». Cold weather — keng tarqalgan yanglish tasavvur, ma'ruzachi uni rad etadi.
+230 ⇒ Ma'ruzachi bu afsona deydi.
+231 ⇒ Sabab sifatida tilga olinmadi.
+232 ⇒ Bu keyingi mashg'ulot mavzusi.
+233 ⇒ «roughly seventy thousand kilometres» = 70,000 km. seventeen / seventy ni farqlashni mashq qil.
+234 ⇒ Bu variant ma'noga mos kelmaydi — yuqoridagi qoida bilan solishtir.
+235 ⇒ Juda ko'p.
+236 ⇒ Aksincha.
+237 ⇒ Oxirgi ibora: «how birds navigate using the Earth's magnetic field».
+238 ⇒ Tilga olinmadi.
+239 ⇒ Bu bugungi mashg'ulot mavzusi.
+240 ⇒ Gaplar orasida <b>qarama-qarshilik</b>: arzonroq, lekin hamon ikkilanishadi → However. SAT da avval bog'liqlik mantiqini aniqla: qarama-qarshilik / natija / misol / qo'shish.
+241 ⇒ Similarly — o'xshash fikrni qo'shadi.
+242 ⇒ Therefore — natija, bu yerda esa qarama-qarshilik.
+243 ⇒ For instance — misol, bu yerda esa misol emas.
+244 ⇒ Daromad o'sishi — ko'p tashrif buyuruvchilarning <b>natijasi</b> → As a result.
+245 ⇒ In contrast — qarama-qarshilik.
+246 ⇒ Nonetheless — yon berish, bu yerda esa sabab-natija.
+247 ⇒ Meanwhile — bir vaqtlilik.
+248 ⇒ Vaqt bog'liqligi: avval dastlabki ish, keyin keyingisi → Subsequently («keyinroq»).
+249 ⇒ Likewise — «xuddi shunday».
+250 ⇒ Therefore — natija.
+251 ⇒ For example — misol.
+252 ⇒ Natija va sababni bog'lash kerak. <b>because</b> — ergashtiruvchi bog'lovchi, undan oldin vergul kerak emas. Bog'lovchisiz vergul — comma splice; nuqtali vergul ergashtiruvchi bog'lovchidan oldin qo'yilmaydi.
+253 ⇒ Comma splice — vergul orqali ikkita gap.
+254 ⇒ Run-on — ajratuvchi yo'q.
+255 ⇒ Nuqtali vergul + because — xato: ; dan keyin mustaqil gap keladi.
+256 ⇒ «along with ...» qo'shimchasi eganing sonini o'zgartirmaydi: <b>The scientist</b> — birlik. Va «yesterday» Past Simple ni talab qiladi.
+257 ⇒ Noto'g'ri shakl.
+258 ⇒ Have — ko'plik va Present Perfect.
+259 ⇒ Were — ko'plik.
+260 ⇒ Bitta kompaniyaga tegishlilik → <b>company's</b> (birlik + 's).
+261 ⇒ Apostrof yo'q.
+262 ⇒ Ko'plik — companies' bo'lishi kerak edi.
+263 ⇒ Bunday shakl yo'q.
+264 ⇒ Kalit: «sincerely praises» → samimiy = genuine. Gapning o'zida doim maslahat bor.
+265 ⇒ Hostile — dushmanlik.
+266 ⇒ Ambiguous — noaniq, lekin muallif samimiy.
+267 ⇒ Indifferent — befarq.
+268 ⇒ Although = qarama-qarshilik. «Impractical» ← «feasible» (amalga oshirish mumkin) ning aksi.
+269 ⇒ Absurd impractical bilan qarama-qarshilik hosil qilmaydi.
+270 ⇒ Hostile — rejalar haqida emas.
+271 ⇒ Obsolete — eskirgan.
+272 ⇒ SAT ma'noni yo'qotmasdan ixchamlikni yaxshi ko'radi. «Due to the fact that» → because.
+273 ⇒ So'zga o'ch.
+274 ⇒ Ortiqcha: reason ... because.
+275 ⇒ Sifatdosh oborot «walks» qiluvchi odam-egaga tegishli bo'lishi kerak. Faqat <b>Maya</b> sayr qildi. Qolgan variantlarda — dangling modifier.
+276 ⇒ Gullar sayr qilmadi.
+277 ⇒ Skameyka sayr qilmadi.
+278 ⇒ Ayirishda xato.
+279 ⇒ Bo'lishda xato.
+280 ⇒ 15 — bu 3x, x emas.
+281 ⇒ Nisbat o'rniga x sonini olishgan.
+282 ⇒ 6 — bu faqat y ning farqi.
+283 ⇒ Ko'paytuvchilarga ajratamiz: (x − 2)(x − 3) = 0 → x = <b>2</b> yoki <b>3</b>. Tekshiruv: 2·3 = 6, 2+3 = 5.
+284 ⇒ 1·6=6, lekin 1+6=7≠5.
+285 ⇒ Ishoralar noto'g'ri: yig'indi +5 bo'lishi kerak.
+286 ⇒ Chegirma 25% = 80 × 0,25 = 20. Narx = 80 − 20 = <b>$60</b>. (Tuzoq: $20 — bu chegirmaning o'zi.)
+287 ⇒ Hisoblashda xato.
+288 ⇒ Bu chegirma miqdori.
+289 ⇒ 0,15 × 240 = <b>36</b>. Mumkin: 10% = 24, 5% = 12, 24+12 = 36.
+290 ⇒ Bu 10%.
+291 ⇒ Bu 12,5%.
+292 ⇒ Bu 18,75%.
+293 ⇒ Tenglamalarni qo'shamiz: 2x = 12 → x = <b>6</b>. Keyin y = 4.
+294 ⇒ Bu y.
+295 ⇒ Mos kelmaydi: 8 − y = 2 → y = 6, lekin u holda x + y = 14.
+296 ⇒ Mos kelmaydi.
+297 ⇒ f(3) = 2·3² − 3 = 2·9 − 3 = 18 − 3 = <b>15</b>. Tartib: avval daraja, keyin ko'paytirish.
+298 ⇒ Amallar tartibida xato.
+299 ⇒ 3 ni ayirishni unutishgan yoki ishorada xato qilishgan.
+300 ⇒ Xato: (2·3)² − 3.
+301 ⇒ Jami qismlar 3 + 2 = 5. Bir qism = 30 ÷ 5 = 6. Qizlar 2 qism = <b>12</b>.
+302 ⇒ Bo'lishda xato.
+303 ⇒ Sinfning yarmi.
+304 ⇒ Bu o'g'il bolalar soni.
+305 ⇒ Mean = yig'indi ÷ soni = (4+8+12+16)/4 = 40/4 = <b>10</b>.
+306 ⇒ Bu mediana xatosi.
+307 ⇒ Xato.
+308 ⇒ Bu yig'indi.
+309 ⇒ Asoslari bir xil darajalarni ko'paytirishda <b>ko'rsatkichlar qo'shiladi</b>: 2³·2⁴ = 2⁷.
+310 ⇒ Ko'rsatkichlar ko'paytirilmaydi.
+311 ⇒ Asos o'zgarmaydi.
+312 ⇒ Ko'rsatkichlar ayirilmaydi.
+313 ⇒ 2 ni ayirishni unutishgan.
+314 ⇒ Pifagor teoremasi: c² = 6² + 8² = 36 + 64 = 100 → c = <b>10</b>.
+315 ⇒ Noto'g'ri.
+316 ⇒ Katetlar yig'indisi.
+317 ⇒ Bu c², c emas.
+318 ⇒ Original matn (shu loyiha uchun yaratilgan), 2025
+319 ⇒ Original ssenariy (loyiha uchun yaratilgan), 2025
+320 ⇒ O'rnatilgan darslar, grammatika va SAT savollari, Reading/Listening matnlari
+321 ⇒ Loyihaning original materiallari (MIT)
+322 ⇒ Ta'rif va misollar bilan lug'at (≈250 so'z)
+323 ⇒ Loyihaning original ta'riflari
+324 ⇒ Ochiq IELTS namunalari — havola, nusxa emas: ielts.org
+325 ⇒ College Board Bluebook — bepul amaliy testlar
+326 ⇒ Faqat havola orqali, materiallar o'rnatilmagan: bluebook.collegeboard.org
+327 ⇒ CC BY-NC-SA, faqat havola orqali
+328 ⇒ Zamonaviy imtihonlar ruhida SI yaratgan topshiriqlar
+329 ⇒ «SI» deb belgilanadi va rasmiy emas
+330 ⇒ Sening kitoblaring, so'zlaring va matnlaring
+331 ⇒ Faqat sening qurilmangda saqlanadi
