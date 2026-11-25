@@ -1,5 +1,5 @@
 /* Service Worker: офлайн-режим (cache-first для статики и данных, ИИ-запросы всегда по сети) */
-const V='misha-v3';
+const V='misha-v4';
 const ASSETS=['./','index.html','config.js','manifest.webmanifest','css/style.css','js/mascot.js','js/i18n.js','js/core.js','js/ai.js','js/ui.js','js/views1.js','js/views2.js','js/boot.js','data/words.json','data/questions.json','data/lessons.json','data/prompts.json','data/sources.json','icons/icon.svg','icons/icon-maskable.svg'];
 self.addEventListener('install',e=>{e.waitUntil(caches.open(V).then(c=>c.addAll(ASSETS)).then(()=>self.skipWaiting()))});
 self.addEventListener('activate',e=>{e.waitUntil(caches.keys().then(ks=>Promise.all(ks.filter(k=>k!==V).map(k=>caches.delete(k)))).then(()=>self.clients.claim()))});

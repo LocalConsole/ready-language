@@ -27,6 +27,10 @@ App.speak=function(text,o){o=o||{};return new Promise(res=>{if(!('speechSynthesi
  const next=()=>{if(i>=lines.length||App.stopSpeak){res(true);return}let ln=lines[i++],sp=0;const m=ln.match(/^([A-Za-z ]+):\s*/);if(m){ln=ln.slice(m[0].length);sp=/caller|student|woman|b$/i.test(m[1])?1:0}
   const u=new SpeechSynthesisUtterance(ln);u.lang='en-GB';u.rate=o.rate||.95;if(vs.length)u.voice=vs[(sp%vs.length+(o.vo||0))%vs.length];u.onend=next;u.onerror=next;speechSynthesis.speak(u)};App.stopSpeak=false;next();setTimeout(()=>res(true),Math.min(180000,text.length*120+5000))})};
 App.stop=()=>{App.stopSpeak=true;try{speechSynthesis.cancel()}catch(e){}};
+App.ACC={vocab:'vocab',grammar:'grammar',reading:'reading',listening:'listening',rw:'sat_rw',math:'sat_math'};
+App.POS={n:'существительное',v:'глагол',adj:'прилагательное',adv:'наречие'};
+App.head=(ic,title,sub,acc)=>`<div class="ph" data-acc="${acc||'vocab'}"><span class="pic">${ic}</span><div><h1>${title}</h1>${sub?'<p>'+sub+'</p>':''}</div></div>`;
+App.beginner=()=>{const s=Store.s,d=s.diag;return !d||(d.skills&&d.skills.vocab!=null&&d.skills.vocab<.5)||App.level()<3};
 App.say=(state,text)=>`<div class="say"><div class="misha">${Misha.svg(state,App.outfit())}</div><div class="bubble">${text}</div></div>`;
 App.mood=(state,text)=>App.say(state,text||I18N.line(state));
 
@@ -42,6 +46,7 @@ App.makeVQ=function(w,mode,pool){pool=pool||App.allWords();const others=shuffle(
  const base={id:'v:'+w.id+':'+mode,skill:'vocab',topic:'words',lvl:w.lvl||2,exam:'ielts',src:'Словарь',expl:info,wid:w.id,wd:w,typ:'mcq'};
  if(mode==='def'&&!w.def)mode='tr';if(mode==='cloze'&&!w.ex)mode='tr';
  const build=(q,opts,right,label)=>{const arr=shuffle(opts);return Object.assign(base,{q,opts:arr.map(o=>o.t),a:arr.findIndex(o=>o.right),wrong:arr.map(o=>o.right?'':o.why),id:base.id.replace(/:[^:]*$/,':'+mode)})};
+ if(mode==='rev'){const d=others.filter(x=>x.w!==w.w).slice(0,3);return build('Как по-английски: «'+w.tr+'»?',[{t:w.w,right:1},...d.map(x=>({t:x.w,why:'«'+x.w+'» означает: '+x.tr+'.'}))])}
  if(mode==='tr'){const d=others.filter(x=>x.tr!==w.tr).slice(0,3);return build('Что означает слово «'+w.w+'»?',[{t:w.tr,right:1},...d.map(x=>({t:x.tr,why:'«'+x.tr+'» — это перевод слова «'+x.w+'».'}))])}
  if(mode==='def'){const d=others.filter(x=>x.def).slice(0,3);return build(w.def,[{t:w.w,right:1},...d.map(x=>({t:x.w,why:'«'+x.w+'» означает: '+x.tr+'.'}))])}
  if(mode==='cloze'){const sent=w.ex.replace(new RegExp(w.w.slice(0,Math.max(4,w.w.length-3))+'\\w*','i'),'_____');const d=others.filter(x=>x.pos===w.pos||!w.pos).slice(0,3);return build(sent,[{t:w.w,right:1},...d.map(x=>({t:x.w,why:'«'+x.w+'» ('+x.tr+') не подходит по смыслу.'}))])}
@@ -76,13 +81,13 @@ App.Quiz={
    const q=o.next?o.next(results,i):o.questions[i];if(!q||(!o.next&&i>=o.questions.length)||i>=total){finish();return}
    const p=q.passage?D.passage[q.passage]:null,isL=p&&p.skill==='listening',letters='ABCDEFGH';
    let ans=null,answered=false,played=false,qs=Date.now();
-   root.innerHTML=`${o.header||''}<div class="card"><div class="q-head"><span class="pill ${q.exam==='sat'?'sat':'ielts'}">${esc(o.title||'')}</span><span class="small mute">${i+1} / ${total}</span><span class="sp"></span>${left?'<span class="timer" id="qt"></span>':''}</div>
+   root.innerHTML=`${o.header||''}<div class="card top" data-acc="${App.ACC[q.skill]||'vocab'}"><div class="q-head"><span class="pill ${q.skill}">${esc(o.title||'')}</span><span class="small mute qn">Вопрос ${i+1} из ${total}</span><span class="sp"></span>${left?'<span class="timer" id="qt"></span>':''}</div>
    <div class="bar"><i style="width:${Math.round(i/total*100)}%"></i></div><div style="height:.8rem"></div>
    ${p&&!isL?`<div class="passage" tabindex="0"><b>${esc(p.title)}</b>\n\n${esc(p.text)}</div>`:''}
    ${isL?`<div class="row" style="margin-bottom:.6rem"><button class="btn alt" id="play">▶ Слушать</button>${o.once?'':'<span class="small mute">можно переслушать</span>'}<label class="small"><input type="checkbox" id="sub"> субтитры</label></div><div class="passage" id="tr" hidden>${esc(p.text)}</div>`:''}
    ${q.audio?`<div class="row"><button class="btn alt" id="aud">🔊 Слушать слово</button></div>`:''}
    <h3 id="qq">${esc(q.q)}</h3>
-   ${q.typ==='mcq'?q.opts.map((t,k)=>`<button class="opt" data-k="${k}"><b>${letters[k]}.</b> ${esc(t)}</button>`).join(''):`<input type="text" id="ti" autocomplete="off" autocapitalize="off" spellcheck="false" aria-label="Ответ" placeholder="Твой ответ…">${q.hint?'<div class="small mute">Подсказка: '+esc(q.hint)+'</div>':''}`}
+   ${q.typ==='mcq'?q.opts.map((t,k)=>`<button class="opt" data-k="${k}"><i class="lt">${letters[k]}</i><span>${esc(t)}</span></button>`).join(''):`<input type="text" id="ti" autocomplete="off" autocapitalize="off" spellcheck="false" aria-label="Ответ" placeholder="Твой ответ…">${q.hint?'<div class="small mute">Подсказка: '+esc(q.hint)+'</div>':''}`}
    <div id="fb"></div><div class="row" style="margin-top:.8rem"><button class="btn alt sm" id="skip">${t('skip')}</button><span class="sp"></span><button class="btn" id="go" ${q.typ==='mcq'&&!o.feedback?'disabled':''}>${q.typ==='mcq'&&o.feedback?t('next'):t('check')}</button></div></div>`;
    drawTimer();
    if(isL){$('#play',root).onclick=async()=>{if(o.once&&played)return;played=true;const b=$('#play',root);b.disabled=!!o.once;b.textContent='🔊 Играет…';await App.speak(p.text,{dialog:true,rate:.92});if(!done&&b.isConnected){b.textContent='▶ Ещё раз';b.disabled=!!o.once}};$('#sub',root).onchange=e=>$('#tr',root).hidden=!e.target.checked}
@@ -92,7 +97,7 @@ App.Quiz={
     results.push({q,ans:skipped?null:ans,ok,ms:Date.now()-qs});
     if(o.feedback){Snd.play(ok?'ok':'bad');$$('.opt',root).forEach((b,k)=>{b.disabled=true;if(k===q.a)b.classList.add('good');else if(k===ans)b.classList.add('bad')});
      const ex=q.ai?esc(q.expl):q.expl;const why=(!ok&&q.typ==='mcq'&&ans!=null&&q.wrong[ans])?`<div class="small" style="margin-top:.4rem">❌ ${esc(q.wrong[ans])}</div>`:'';
-     $('#fb').innerHTML=`<div class="say" style="margin-top:.8rem"><div class="misha" style="width:74px">${Misha.svg(ok?'happy':'sad',App.outfit(),{still:1})}</div><div class="expl" style="flex:1"><b>${ok?t('correct'):t('wrong')}</b>${q.typ==='type'?`<br>${t('rightAnswer')}: <b>${esc(q.answer)}</b>`:''}<br>${ex}${why}</div></div>`;
+     $('#fb').innerHTML=`<div class="say" style="margin-top:.8rem"><div class="misha" style="width:74px">${Misha.svg(ok?'happy':'sad',App.outfit(),{still:1})}</div><div class="expl ${ok?'good':'bad'}" style="flex:1"><b class="vd">${ok?'✅ '+t('correct'):'❌ '+t('wrong')}</b>${q.typ==='type'?`<br>${t('rightAnswer')}: <b>${esc(q.answer)}</b>`:''}<br>${ex}${why}</div></div>`;
      const go=$('#go',root);go.disabled=false;go.textContent=t('next');go.onclick=()=>{i++;show()};$('#skip',root).hidden=true;if(isL)$('#tr',root).hidden=false;
      if(q.key&&isL){$('#tr',root).innerHTML=esc(p.text).replace(esc(q.key),m=>'<mark>'+m+'</mark>')}}
     else{i++;show()}};
@@ -124,26 +129,31 @@ App.views.review=function(root,arg){
   const mine=it.ans==null?'— (пропущено)':(L?it.ans||'—':q.opts[it.ans]);const right=L?q.answer:q.opts[q.a];
   const inj=S().errors.some(e=>e.qid===q.id);
   const ex=q.ai?esc(q.expl):q.expl;
-  el.innerHTML=`<div class="card stagger"><div>${App.say('sad',I18N.line('sad'))}</div>
-   <div><span class="pill">${q.skill}</span> <span class="pill">${esc(topicName(q.topic))}</span> <span class="pill ${q.exam}">${q.exam}</span> <span class="small mute">· источник: ${esc(q.src||'')}</span>
-   <h3 style="margin-top:.6rem">1. Вопрос</h3>${p&&p.skill==='reading'?`<div class="passage">${esc(p.text)}</div>`:''}<p>${esc(q.q)}</p>${!L?`<ol type="A" class="small">${q.opts.map(o=>`<li>${esc(o)}</li>`).join('')}</ol>`:''}<p>${t('yourAnswer')}: <b style="color:var(--bad)">${esc(mine)}</b></p></div>
-   <div><h3>2. ${t('rightAnswer')}</h3><p><b style="color:var(--ok)">${esc(right)}</b></p></div>
-   <div>${App.say('explain','<b>3. Почему именно так</b><br>'+ex)}</div>
-   ${!L&&it.ans!=null&&q.wrong[it.ans]?`<div class="expl"><b>4. ${t('whyNot')}</b><br>«${esc(mine)}» — ${esc(q.wrong[it.ans])}</div>`:`<div class="expl"><b>4. ${t('whyNot')}</b><br>${L?'Ответ не совпал с эталоном — сверь написание/смысл.':it.ans==null?'Вариант не выбран — на экзамене лучше всегда выбирать наиболее вероятный ответ.':'«'+esc(mine)+'» не подходит — сравни с правилом в пункте 3.'}</div>`}
-   ${p&&p.skill==='listening'?`<div><h3>6. Аудио и транскрипт</h3><button class="btn alt sm" id="ap">▶ Прослушать фрагмент</button><div class="passage" style="margin-top:.5rem">${esc(p.text).replace(q.key?esc(q.key):'§§',m=>'<mark>'+m+'</mark>')}</div></div>`:''}
+  el.innerHTML=`<div class="card stagger top" data-acc="${App.ACC[q.skill]||'danger'}"><div>${App.say('sad',I18N.line('sad'))}</div>
+   <div><span class="pill ${q.skill}">${q.skill}</span> <span class="pill">${esc(topicName(q.topic))}</span> <span class="pill ${q.exam}">${q.exam}</span> <span class="small mute">· источник: ${esc(q.src||'')}</span></div>
+   <div class="rs q"><h3><span class="n">1</span>Вопрос</h3>${p&&p.skill==='reading'?`<div class="passage">${esc(p.text)}</div>`:''}<p style="margin:.3rem 0"><b>${esc(q.q)}</b></p>${!L?`<ol type="A" class="small">${q.opts.map(o=>`<li>${esc(o)}</li>`).join('')}</ol>`:''}</div>
+   <div class="rs mine"><h3><span class="n">✗</span>${t('yourAnswer')}</h3><b style="color:var(--bad)">${esc(mine)}</b></div>
+   <div class="rs right"><h3><span class="n">✓</span>${t('rightAnswer')}</h3><b style="color:var(--ok)">${esc(right)}</b></div>
+   <div class="rs why"><h3><span class="n">3</span>Почему именно так</h3>${ex}</div>
+   <div class="rs no"><h3><span class="n">4</span>${t('whyNot')}</h3>${!L&&it.ans!=null&&q.wrong[it.ans]?`«${esc(mine)}» — ${esc(q.wrong[it.ans])}`:L?'Ответ не совпал с эталоном — сверь написание/смысл.':it.ans==null?'Вариант не выбран — на экзамене лучше всегда выбирать наиболее вероятный ответ.':'«'+esc(mine)+'» не подходит — сравни с правилом в пункте 3.'}</div>
+   ${p&&p.skill==='listening'?`<div class="rs au"><h3><span class="n">6</span>Аудио и транскрипт</h3><button class="btn alt sm" id="ap">▶ Прослушать фрагмент</button><div class="passage" style="margin:.5rem 0 0">${esc(p.text).replace(q.key?esc(q.key):'§§',m=>'<mark>'+m+'</mark>')}</div></div>`:''}
    ${p&&p.skill==='reading'&&q.key?`<div class="expl small"><b>Где в тексте:</b> «${esc(q.key)}»</div>`:''}
    <div id="sim"></div>
-   <div class="row" style="margin-top:.8rem"><button class="btn alt sm" id="ok">✓ ${t('understood')}</button><button class="btn alt sm" id="simp">🧸 ${t('simpler')}</button><button class="btn alt sm" id="jn">${inj?'📓 '+t('inJournal'):'📓 '+t('addJournal')}</button><button class="btn alt sm" id="try">🎯 ${t('tryYourself')}</button></div><div id="aix"></div></div>`;
+   <div class="hint">👉 <span>Нажми «Попробуй сам» — Миша даст похожий вопрос, чтобы закрепить.</span></div>
+   <div class="row" style="margin-top:.8rem"><button class="btn alt sm" id="ok">✓ ${t('understood')}</button><button class="btn alt sm" id="simp">🧸 ${t('simpler')}</button><button class="btn alt sm" id="jn">${inj?'📓 '+t('inJournal'):'📓 '+t('addJournal')}</button><button class="btn sm" id="try">🎯 ${t('tryYourself')}</button></div><div id="aix"></div></div>`;
   if(p&&p.skill==='listening'){$('#ap').onclick=()=>App.speak(q.key||p.text,{rate:.9})}
   $('#ok').onclick=()=>{Snd.play('ok');toast('Отмечено ✓');const n=$('#nx');if(n)n.click()};
   $('#jn').onclick=e=>{const s=S();const has=s.errors.findIndex(x=>x.qid===q.id);if(has>=0){s.errors.splice(has,1);e.target.textContent='📓 '+t('addJournal')}else{s.errors.push({id:uid(),qid:q.id,q:Object.assign({},q),ans:it.ans,date:today(),count:1,topic:q.topic,skill:q.skill});e.target.textContent='📓 '+t('inJournal')}Store.save()};
-  $('#simp').onclick=async()=>{const b=$('#aix');b.innerHTML='<div class="skel"></div><div class="skel" style="width:70%"></div>';const r=await AI.explainSimpler(q,it.ans);b.innerHTML=r?`<div class="say" style="margin-top:.6rem"><div class="misha" style="width:80px">${Misha.svg('explain',App.outfit(),{still:1})}</div><div class="bubble">${esc(r).replace(/\n/g,'<br>')}</div></div>`:`<div class="expl">${I18N.t('aiOff')}. Упрощённо: ${q.expl.replace(/<[^>]+>/g,'').split('.').slice(0,2).join('.')}.</div>`};
-  $('#try').onclick=async()=>{const b=$('#sim');b.innerHTML='<div class="skel"></div>';let sim=D.questions.questions.filter(x=>x.topic===q.topic&&x.id!==q.id&&!x.passage);
+  $('#simp').onclick=async()=>{const b=$('#aix');b.innerHTML='<div class="skel"></div><div class="skel" style="width:70%"></div>';const r=await AI.explainSimpler(q,it.ans);b.innerHTML=r?`<div class="say" style="margin-top:.6rem"><div class="misha" style="width:80px">${Misha.svg('explain',App.outfit(),{still:1})}</div><div class="bubble">${esc(r).replace(/\*\*(.+?)\*\*/g,'<b>$1</b>').replace(/\n/g,'<br>')}</div></div>`:`<div class="expl">${I18N.t('aiOff')}. Упрощённо: ${q.expl.replace(/<[^>]+>/g,'').split('.').slice(0,2).join('.')}.</div>`};
+  const tryOne=async()=>{const b=$('#sim');b.innerHTML='<div class="skel"></div>';let sim=D.questions.questions.filter(x=>x.topic===q.topic&&x.id!==q.id&&!x.passage);
    if(q.wid)sim=[App.makeVQ(pick(App.allWords().filter(w=>w.id!==q.wid)),'tr')];
    let s2=sim.length?pick(sim):await AI.extraQuestion(topicName(q.topic),q.lvl||2);
    if(!s2){b.innerHTML='<div class="expl">Похожих заданий пока нет. Загляни в уроки по теме.</div>';return}
-   b.innerHTML='<div class="card" id="mini"></div>';App.Quiz.run({root:$('#mini'),questions:[s2],feedback:true,title:'Теперь сам'}).then(r=>{$('#mini').insertAdjacentHTML('beforeend',`<p class="center">${r.ok?'🎉 Получилось! Тема закрепляется.':'Ничего, она вернётся в повторение.'}</p>`);App.record(r.results)})};
- };draw()};
+   b.innerHTML='<div class="card" id="mini"></div>';const r=await App.Quiz.run({root:$('#mini'),questions:[s2],feedback:true,title:'Теперь сам'});App.record(r.results);
+   $('#mini').innerHTML=`<div class="say">${Misha.html(r.ok?'happy':'cheer',App.outfit(),{still:1})}<div class="bubble">${r.ok?'🎉 Получилось! Тема закрепляется.':'Ничего, она вернётся в повторение — ошибка уже в журнале.'}</div></div><div class="row"><button class="btn" id="again">🎯 Ещё один похожий</button><button class="btn alt" id="done">Закрыть</button></div>`;
+   $('#again').onclick=tryOne;$('#done').onclick=()=>{$('#sim').innerHTML=''}};
+  $('#try').onclick=tryOne;
+  };draw()};
 App.topicName=t=>({tenses_pp:'Present Perfect / Past Simple',articles:'Артикли',conditionals:'Условные',passive:'Пассив',prepositions:'Предлоги',relative:'Относительные придаточные',modal:'Модальные глаголы',subject_verb:'Согласование',reported:'Косвенная речь',comparatives:'Степени сравнения',gerunds:'Герундий / инфинитив',tfng:'True/False/Not Given',mcq_reading:'Reading: выбор ответа',headings:'Reading: заголовки',listening_form:'Listening: форма',listening_lecture:'Listening: лекции',sat_transitions:'SAT: связки',sat_boundaries:'SAT: границы предложений',sat_vocab:'SAT: слова в контексте',sat_concision:'SAT: краткость',m_linear:'Math: линейные ур-я',m_quad:'Math: квадраты и функции',m_percent:'Math: проценты и отношения',m_geo:'Math: геометрия',words:'Словарь'}[t]||t);
 
 /* ---------- роутер ---------- */

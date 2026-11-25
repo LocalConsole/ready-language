@@ -25,9 +25,9 @@ function arms(s){
   switch(s){
     case 'hello':return arm(46,118,24)+arm(154,118,-150,'m-wave');
     case 'celebrate':return arm(46,118,150,'m-jump')+arm(154,118,-150,'m-jump');
-    case 'cheer':return arm(46,118,22)+`<g><ellipse cx="156" cy="128" rx="11" ry="20" fill="${c}" transform="rotate(-40 156 128)"/><rect x="160" y="96" width="12" height="18" rx="5" fill="#9a6432"/><rect x="164" y="86" width="6" height="14" rx="3" fill="#9a6432"/></g>`;
+    case 'cheer':return arm(46,118,22)+`<g style="transform:rotate(-140deg);transform-origin:154px 118px"><ellipse cx="154" cy="134" rx="11" ry="22" fill="${c}"/><circle cx="154" cy="154" r="10" fill="#9a6432"/><rect x="159" y="145" width="7" height="14" rx="3.5" fill="#9a6432"/></g>`;
     case 'board':return arm(46,118,22)+`<g><rect x="118" y="130" width="76" height="52" rx="5" fill="#2f5d50" stroke="#c89b5a" stroke-width="4"/><path d="M128 146h40M128 158h52M128 170h30" stroke="#f3efe6" stroke-width="2.5" stroke-linecap="round" opacity=".9"/></g><g style="transform:rotate(-70deg);transform-origin:154px 118px"><ellipse cx="154" cy="134" rx="11" ry="22" fill="${c}"/></g><path d="M158 100L132 140" stroke="#c89b5a" stroke-width="4" stroke-linecap="round"/>`;
-    case 'think':return arm(46,118,22)+`<g style="transform:rotate(-135deg);transform-origin:154px 118px"><ellipse cx="154" cy="134" rx="11" ry="22" fill="${c}"/></g><circle cx="122" cy="106" r="8" fill="#9a6432"/>`;
+    case 'think':return arm(46,118,22)+`<path d="M148 128Q150 110 124 107" stroke="#8b5a2b" stroke-width="20" stroke-linecap="round" fill="none"/><circle cx="121" cy="107" r="9" fill="#9a6432"/>`;
     case 'explain':return arm(46,118,60)+arm(154,118,-60);
     default:return arm(46,118,22)+arm(154,118,-22);
   }
