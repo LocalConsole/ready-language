@@ -165,7 +165,7 @@ function WordPopup({ raw, idx, onClose }: { raw: string; idx: ReturnType<typeof 
   };
   return (
     <div className="pop reader-pop" role="dialog" aria-label={t('Слово')} data-testid="word-popup">
-      {loading ? <><div className="skel" /><div className="skel" style={{ width: '60%' }} /></> : (
+      {loading ? <><div className="row"><span className="small mute sp">{raw}…</span><button className="btn alt sm" aria-label={t('Закрыть')} data-testid="pop-close" onClick={onClose}>✕</button></div><div className="skel" /><div className="skel" style={{ width: '60%' }} /></> : (
         <>
           <div className="row">
             <h2 style={{ margin: 0 }}>{info ? info.w : raw}</h2>
