@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""Генерирует data/*.json из компактных источников. Запуск: python3 tools/build_data.py"""
+"""Генерирует src/data/*.json из компактных источников. Запуск: python3 tools/build_data.py"""
 import json, os, re
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 D = os.path.join(ROOT, 'src', 'data'); os.makedirs(D, exist_ok=True)

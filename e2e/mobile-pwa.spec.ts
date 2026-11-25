@@ -45,9 +45,16 @@ test.describe('PWA', () => {
     expect(m.start_url).toContain('/ready-language/');
     expect(m.icons.some((i: { sizes: string }) => i.sizes === '512x512')).toBeTruthy();
     await onboard(page);
+    await page.waitForTimeout(600); // запись прогресса в IndexedDB (debounce)
     await page.evaluate(async () => { await navigator.serviceWorker.ready; });
     await page.reload();
     await page.waitForFunction(() => !!navigator.serviceWorker.controller, null, { timeout: 15000 });
+    // ждём, пока workbox закончит precache (иначе ленивые чанки ещё не в кэше)
+    await page.waitForFunction(async () => {
+      const names = (await caches.keys()).filter((n) => /precache/.test(n));
+      if (!names.length) return false;
+      return (await (await caches.open(names[0])).keys()).length >= 45;
+    }, null, { timeout: 30000 });
     await context.setOffline(true);
     await page.reload();
     await expect(page.locator('main')).toBeVisible();

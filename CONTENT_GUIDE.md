@@ -1,16 +1,16 @@
 # Как добавлять свой контент
 
-Всё встроенное содержимое лежит в `data/*.json`. Двигаться удобнее через исходники в `tools/` — они превращаются в JSON одной командой:
+Всё встроенное содержимое лежит в `src/data/*.json`. Двигаться удобнее через исходники в `tools/` — они превращаются в JSON одной командой:
 
 ```bash
-python3 tools/build_data.py     # пересобирает data/words.json, questions.json, lessons.json, prompts.json, sources.json
+python3 tools/build_data.py     # пересобирает src/data/words.json, questions.json, lessons.json, prompts.json, sources.json
 ```
 
 > ⚠️ Авторское право: не вставляй в проект тексты и словари защищённых книг (Cambridge IELTS, Barron's, Official Digital SAT Study Guide и т. п.). Слова и тексты из своих копий книг добавляй **только у себя в браузере** (раздел «Книги» и «Читалка») — они хранятся на твоём устройстве и не попадают в репозиторий.
 
 ## 1. Свои слова из книги (без правки кода)
 Раздел **Практика → Книги и домашки**:
-1. Выбери книгу из списка (список задаётся в `config.js → books`).
+1. Выбери книгу из списка (список задаётся в `src/data/books.ts`).
 2. Вставь слова или загрузи `.txt`:
    ```
    #12                          ← номер страницы
@@ -55,7 +55,7 @@ L('gr5','grammar','both','Модальные глаголы','🔧',10,'modal',
 `topic` определяет, какие вопросы войдут в практику и мини-тест. Для Writing/Speaking укажи `task={'type':'writing','id':'t2'}` или `{'type':'speaking'}`. Новый модуль добавь в `modules`.
 
 ## 6. Задания Writing / Speaking
-Файл `data/prompts.json` формируется в `build_data.py` (блок `prompts.json`): `writing` — список заданий (`min`, `minWords`, `exam`), `speaking` — вопросы Part 1/3 и карточки Part 2.
+Файл `src/data/prompts.json` формируется в `build_data.py` (блок `prompts.json`): `writing` — список заданий (`min`, `minWords`, `exam`), `speaking` — вопросы Part 1/3 и карточки Part 2.
 
 ## 7. Источники
 Каждый материал должен быть описан в блоке `sources.json` (`cat`: `own | open | ai | user`, `license`, `year`) — экран «Откуда материалы» строится из него.

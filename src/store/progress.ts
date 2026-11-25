@@ -352,7 +352,7 @@ export async function initProgress() {
       if (s[k] !== prev[k]) {
         dirty = true;
         clearTimeout(timer);
-        timer = setTimeout(flush, 400);
+        timer = setTimeout(flush, 150);
         return;
       }
     }

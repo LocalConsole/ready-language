@@ -1,51 +1,57 @@
 # Миша — IELTS & Digital SAT «от нуля до экзамена»
 
-Статический PWA-сайт (vanilla HTML/CSS/JS, без сборки и без бэкенда). Ведёт русский медведь Миша.
+PWA на **React + Vite + TypeScript** (React Router `HashRouter`, Zustand, Dexie/IndexedDB, Framer Motion). Ведёт русский медведь Миша. Без бэкенда: ИИ ходит через готовый прокси на Google Apps Script.
 
-## Запуск
-- **GitHub Pages:** Settings → Pages → Deploy from a branch → `main` / `(root)`.
-- **Локально:** `python3 -m http.server 8000` и открыть http://localhost:8000 (с `file://` браузер не даст читать JSON).
-- Установка как приложение — кнопка «Установить» в браузере (PWA, работает офлайн после первого открытия).
+## Запуск локально
+```bash
+npm ci
+npm run dev        # http://localhost:5173/ready-language/
+npm run build      # tsc -b && vite build → dist/ (с service worker)
+npm run preview    # http://localhost:4173/ready-language/
+npm run typecheck
+npm run i18n:check # покрытие переводов en/uz
+npm test           # Playwright (сборка + preview поднимаются сами)
+```
+Тесты в песочнице без скачанного Chromium: `CHROME_PATH=/usr/bin/google-chrome npm test`. Первый раз: `npx playwright install chromium`.
 
-## ИИ
-Подключён готовый прокси на Google Apps Script (адрес в `config.js → proxyUrl`; ключи Groq/Gemini/Mistral/OpenRouter хранятся внутри него, на сайте их нет).
-- Запрос: `POST`, `Content-Type: text/plain`, тело `{"prompt","system","long"}`; ответ `{"text","provider"}` или `{"error"}`.
-- `long:true` — для проверки Writing/Speaking, разборов и упрощённых текстов (первым отвечает Gemini); короткие определения идут без него (быстрый Groq).
-- Сначала всегда смотрится локальная база; ответы кэшируются в IndexedDB; при ошибке прокси ставится на паузу на 2 минуты, сайт работает локально.
-- Запасной вариант: свой ключ Groq/Gemini/OpenRouter в Настройках (хранится только на устройстве). Cloudflare Worker из `worker/` — альтернатива, если захочешь свой прокси.
+## Деплой
+`.github/workflows/deploy.yml` на каждый push в `main` собирает проект и публикует `dist` на GitHub Pages (`base: '/ready-language/'`). В настройках репозитория: Settings → Pages → Source: **GitHub Actions**. `test.yml` гоняет Playwright на pull request.
+
+## ИИ (`src/lib/ai.ts`)
+Единственная точка входа. `POST` на прокси, `Content-Type: text/plain`, тело `{"prompt","system","long"}`; ответ `{"text","provider"}` или `{"error"}`. Адрес можно переопределить через `VITE_AI_PROXY_URL`. Ключей API в коде нет.
+- `long:true` — только проверка Writing/Speaking и длинные разборы ошибок («Объясни проще»); короткие определения идут без него.
+- Ответы кэшируются в IndexedDB по SHA-256(system+prompt); одинаковые одновременные запросы объединяются.
+- При ошибке прокси включается пауза (2 мин; 10 мин при лимите) — повторных запросов нет, UI показывает локальный вариант.
+- Запасной вариант: свой ключ Groq/Gemini/OpenRouter в Настройках (только `localStorage`, в экспорт не попадает).
 
 ## Структура
 ```
-index.html, config.js, manifest.webmanifest, sw.js
-css/style.css            дизайн-система, темы, анимации
-js/mascot.js             Миша: SVG, 8 состояний, одежда за уровни
-js/core.js               хранилище, IndexedDB, XP/серия/заморозки, SRS (SM-2), план
-js/ai.js                 провайдеры ИИ, кэш, локальная оценка Writing/Speaking
-js/ui.js                 роутер, движок тестов, генератор словарных вопросов, «Разбор ошибок с Мишей»
-js/views1.js, views2.js  экраны
-data/*.json              слова, вопросы, уроки, задания, источники (генерируются tools/build_data.py)
-tools/                   исходники контента и сборщик
-worker/                  Cloudflare Worker (прокси ключей)
-CONTENT_GUIDE.md         как добавлять книги, слова, тесты и уроки
+src/
+  components/   Mascot, Quiz (движок тестов), Layout, Toasts, Calculator, ErrorBoundary…
+  pages/        Home, Start (онбординг), Practice, Profile, Settings, Sources, Dash (аналитика)
+  features/
+    diagnostic/ адаптивная диагностика        lessons/  карта пути и уроки
+    reader/     читалка, тап по слову         vocab/    SRS, режимы, книги, домашки
+    mistakes/   разбор с Мишей, журнал        exams/    IELTS, SAT (адаптивно), отчёт
+    writing/ speaking/ shadow/                проверка Writing/Speaking, диктанты
+  store/        Zustand: progress (→ IndexedDB), settings (→ localStorage), ui
+  lib/          ai.ts, aiTasks.ts, db.ts (Dexie), srs, plan, calc (безопасный парсер), sanitize…
+  data/         words, questions, lessons, prompts, sources, uz (JSON) + books.ts
+  i18n/         t('русский текст'): en.ts, uzExtra.ts, uz.ts (+ data/uz.json)
+  sw.ts         service worker (precache, офлайн, «Миша скучает»)
+e2e/            Playwright-тесты   docs/BUGS.md  баги старой версии   TEST_CHECKLIST.md
+tools/          сборщики контента (Python)   worker/  Cloudflare Worker (опциональный прокси)
 ```
+Прогресс (XP, SRS, ошибки, экзамены, тексты) — в IndexedDB `misha-react`; настройки — в `localStorage`. Экспорт/импорт — Настройки → «Данные» (JSON без ключей; импорт валидируется и очищается). Старый прогресс из версии на чистом JS (`localStorage misha.state`) мигрирует при первом запуске.
 
-## Что реализовано
-Онбординг (IELTS 5.0–9.0 / SAT 1000–1600 / оба + даты), адаптивная диагностика (vocab, grammar, reading, listening, SAT R&W, math) → уровень A1–C2, band/SAT, карта сильных и слабых сторон; калькулятор нагрузки (пересчёт при пропусках); карта пути; 18 уроков (объяснение → пример → практика → мини-тест → домашка); SRS-словарь (карточки, выбор, ввод, аудио-диктовка, поиск ошибки в написании, морфология, мнемоники); книги и домашки по страницам с экзаменом трёх уровней; читалка (тап по слову, перевод/определение/произношение, «в мои слова», закладки, прогресс, .txt/.epub/.html); Writing с таймером и счётчиком; Speaking (запись, Part 2: 1+2 мин); Shadowing и диктанты; пробные экзамены IELTS и SAT (адаптивные модули, калькулятор/график); разбор ошибок (7 пунктов, фильтры, «объясни проще», журнал, «попробуй сам»); дашборд (прогноз, навыки, тепловая карта, динамика); PWA, офлайн, экспорт/импорт, тёмная тема, RU/EN, режим дислексии, «слабый телефон».
+## Контент
+См. [CONTENT_GUIDE.md](CONTENT_GUIDE.md): свои слова и тексты (в браузере), добавление слов, вопросов и уроков через `tools/build_data.py`.
 
 ## Честные ограничения
-- Встроенная база небольшая: **256 слов, 65 вопросов, 18 уроков, 2 текста Reading, 2 сценария Listening**. Цель «3000 слов» достижима только через ИИ/импорт/расширение `tools/words.txt`.
+- Встроенная база небольшая: 256 слов, 65 вопросов, 18 уроков, 2 текста Reading, 2 сценария Listening. «3000 слов» — только через ИИ/импорт/расширение `tools/words.txt`.
 - Reading/Listening в пробнике сокращены под встроенный банк; Writing/Speaking — настоящие тайминги.
-- Listening озвучивается голосами браузера (Web Speech API), не студийной записью.
-- Оценка Writing/Speaking без ИИ — приблизительная эвристика (помечается в интерфейсе); с ИИ — ориентир, а не официальный балл.
-- PDF не разбирается без внешней библиотеки; фоновые push-уведомления «Миша скучает» работают только там, где есть Periodic Background Sync (Chrome/Android PWA).
-- Тексты и словари защищённых книг не включены; официальные материалы — только ссылками.
-
-## Узбекский язык (O'zbekcha)
-
-Переключатель: Профиль → Настройки → «Язык интерфейса» (или на первом экране). Страница перезагружается.
-Как устроено: код и данные остаются на русском, а `js/uz.js` подставляет перевод из `data/uz.json`
-(интерфейс — на лету в DOM, слова/уроки/вопросы — при загрузке данных). Для ИИ в узбекском режиме
-добавляется требование отвечать по-узбекски. Чтобы поправить или добавить перевод, отредактируй
-`tools/uz1.txt … uz3.txt` (интерфейс), `tools/uzd*.txt` (уроки/вопросы), `tools/uzw.txt` (слова) и запусти
-`python3 tools/build_uz.py` (список полных строк для `uzd*` строится из `data/*.json` в том же порядке).
-Не переведённая фраза просто остаётся по-русски.
+- Listening озвучивается голосами браузера (Web Speech API).
+- Оценка Writing/Speaking без ИИ — приблизительная эвристика (помечается в интерфейсе); с ИИ — ориентир, не официальный балл.
+- Английский интерфейс переведён полностью, **но учебное содержимое** (тексты уроков, объяснения к вопросам) остаётся на русском; узбекский — через словарь `uz.json` + `trUz()`.
+- PDF не разбирается без внешней библиотеки; фоновые «Миша скучает» работают только там, где есть Periodic Background Sync (Chrome/Android PWA).
+- Тексты и словари защищённых книг не включены.
