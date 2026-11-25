@@ -1,0 +1,108 @@
+/* ===== Лесная тема: тёплый игровой стиль «как в мобильном приложении». Переопределяет global.css ===== */
+:root{
+  --bg:#FFF8E7;--card:#FFFEF5;--ink:#4A3220;--mute:#8B7355;--line:#EBDDB9;--soft:#F7EBCB;
+  --brand:#2D7A3A;--brand2:#1F5A2A;--teal:#2D7A3A;--gold:#FFA500;--honey:#FFA500;--honey2:#C77D00;
+  --ok:#3C9D4E;--bad:#D9625B;--bad-soft:#FBE3DF;--brown:#7D4F27;--brown-d:#5A3A1E;
+  --trail:#EBD39B;--trail-edge:#D4B676;--forest:#E4EFCF;
+  --r:20px;--sh:0 4px 0 rgba(125,79,39,.12);
+  --font:"Nunito Variable",Nunito,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;--head:"Nunito Variable",Nunito,system-ui,sans-serif;
+}
+[data-theme=dark]{
+  --bg:#1E2522;--card:#27322C;--ink:#F1EBDA;--mute:#A9B3A5;--line:#37473C;--soft:#2E3B33;
+  --brand:#5DBB6C;--brand2:#2D7A3A;--teal:#5DBB6C;--ok:#5DBB6C;--bad:#E07A72;--bad-soft:#4A2E2B;
+  --trail:#4A4030;--trail-edge:#5E5139;--forest:#243029;--sh:0 4px 0 rgba(0,0,0,.35);
+}
+@media(prefers-color-scheme:dark){[data-theme=auto]{
+  --bg:#1E2522;--card:#27322C;--ink:#F1EBDA;--mute:#A9B3A5;--line:#37473C;--soft:#2E3B33;
+  --brand:#5DBB6C;--brand2:#2D7A3A;--teal:#5DBB6C;--ok:#5DBB6C;--bad:#E07A72;--bad-soft:#4A2E2B;
+  --trail:#4A4030;--trail-edge:#5E5139;--forest:#243029;--sh:0 4px 0 rgba(0,0,0,.35)}}
+
+html{background:#F2E6C4}
+[data-theme=dark] html,html[data-theme=dark]{background:#141917}
+body{font-family:var(--font);font-weight:600;background:transparent}
+h1,h2,h3{font-weight:900;letter-spacing:-.01em;color:var(--ink)}
+h1{font-size:2rem}h2{font-size:1.5rem}h3{font-size:1.2rem}
+
+/* колонка как экран телефона */
+.app{max-width:520px;margin:0 auto;min-height:100vh;background:var(--bg);position:relative;box-shadow:0 0 0 1px var(--line),0 0 40px rgba(90,58,30,.12)}
+main{max-width:none;padding:.9rem 1rem 6.5rem}
+
+/* верхняя панель */
+#top{top:0;gap:.45rem;padding:.55rem .8rem;border-bottom:0;background:var(--bg)}
+#top .logo{color:var(--brown-d);font-weight:900}
+[data-theme=dark] #top .logo{color:var(--ink)}
+.stat{display:inline-flex;align-items:center;gap:.25rem;padding:.2rem .6rem .2rem .4rem;border-radius:999px;background:var(--card);border:2px solid var(--line);font-weight:900;font-size:.95rem}
+.stat.paw{color:#B5413A}.stat.paw b{color:var(--ink)}
+.stat b{font-variant-numeric:tabular-nums}
+.chip{background:var(--card);border:2px solid var(--line);font-weight:800}
+#top nav{display:none}
+
+/* карточки */
+.card{border:2px solid var(--line);box-shadow:var(--sh);background:var(--card)}
+
+/* кнопки: крупные, со «ступенькой» */
+.btn{background:var(--brand);color:#fff;border-radius:16px;padding:.8rem 1.3rem;font-weight:900;font-size:1rem;letter-spacing:.02em;text-transform:none;box-shadow:0 4px 0 var(--brand2);transition:transform .12s,box-shadow .12s,filter .15s}
+.btn:hover{background:var(--brand);filter:brightness(1.07)}
+.btn:active{transform:translateY(4px);box-shadow:0 0 0 var(--brand2)}
+[data-theme=dark] .btn{color:#10230F}
+.btn.honey,.btn.big.honey{background:var(--honey);box-shadow:0 4px 0 var(--honey2);color:#4A2A00}
+.btn.alt{background:var(--card);color:var(--brown-d);border:2px solid var(--line);box-shadow:0 4px 0 var(--line)}
+[data-theme=dark] .btn.alt{color:var(--ink)}
+.btn.alt:hover{background:var(--soft)}
+.btn.ok{background:var(--ok);box-shadow:0 4px 0 #2C7A3A}
+.btn.big{width:100%;padding:1rem 1.3rem;font-size:1.1rem;text-align:center;text-decoration:none;display:inline-block;border-radius:18px}
+.btn.sm{padding:.4rem .8rem;font-size:.88rem;border-radius:12px;box-shadow:0 3px 0 var(--brand2)}
+.btn.alt.sm{box-shadow:0 3px 0 var(--line)}
+a.btn{text-decoration:none}
+
+/* прогресс */
+.bar{height:14px;background:var(--soft);border:2px solid var(--line)}
+.bar>i{background:linear-gradient(90deg,#4FAE5D,var(--brand));position:relative}
+.bar>i:after{content:"";position:absolute;left:8px;right:8px;top:2px;height:3px;border-radius:3px;background:rgba(255,255,255,.35)}
+
+/* Миша и реплики */
+.bubble{border:2px solid var(--line);border-radius:20px}
+.bubble:before{border-left:2px solid var(--line);border-bottom:2px solid var(--line)}
+
+/* варианты ответа */
+.opt{border:2px solid var(--line);background:var(--card);border-radius:18px;box-shadow:0 3px 0 var(--line);font-weight:800;transition:transform .1s,border-color .15s,background .15s}
+.opt:active{transform:translateY(3px);box-shadow:none}
+.opt.sel,.opt.on{border-color:var(--brand);background:color-mix(in srgb,var(--brand) 12%,var(--card));box-shadow:0 3px 0 var(--brand2)}
+.opt.right{border-color:var(--ok);background:color-mix(in srgb,var(--ok) 16%,var(--card))}
+.opt.wrong{border-color:var(--bad);background:var(--bad-soft)}
+
+/* главный экран */
+.hero-h{margin:.2rem 0 .8rem;font-size:1.7rem;text-align:left}
+.hero{display:flex;align-items:flex-end;gap:.5rem;padding:1rem 1rem 1rem 1.2rem;overflow:hidden;background:linear-gradient(180deg,var(--card),var(--soft))}
+.hero-t{flex:1;min-width:0}
+.hero-k{font-size:.9rem;color:var(--mute);font-weight:800;text-transform:uppercase;letter-spacing:.06em}
+.hero-n{font-size:1.45rem;font-weight:900;line-height:1.15;margin:.15rem 0 .9rem;overflow-wrap:anywhere}
+.hero-m{flex:none;margin:-.4rem -.3rem -.6rem 0;animation:bob 3.2s ease-in-out infinite}
+@keyframes bob{0%,100%{transform:translateY(0) rotate(-1deg)}50%{transform:translateY(-6px) rotate(1.5deg)}}
+
+/* лесная карта */
+.fmap{position:relative;margin:0 -1rem 1rem;padding:0;background:radial-gradient(ellipse at 15% 8%,var(--forest),transparent 55%),radial-gradient(ellipse at 90% 90%,var(--forest),transparent 55%)}
+.fmap-path{position:absolute;inset:0;width:100%;height:100%}
+.fmap-paw{position:absolute;color:var(--trail-edge);opacity:.9;pointer-events:none}
+.fmap-slot{position:absolute;transform:translate(-50%,-50%);display:flex;flex-direction:column;align-items:center;width:130px}
+.fnode{position:relative;display:grid;place-items:center;width:68px;height:68px;border-radius:50%;background:var(--card);border:4px solid var(--line);box-shadow:0 5px 0 var(--line);text-decoration:none;transition:transform .12s,box-shadow .12s}
+.fnode:active{transform:translateY(4px);box-shadow:0 1px 0 var(--line)}
+.fnode.done{border-color:var(--ok);box-shadow:0 5px 0 #2C7A3A;background:color-mix(in srgb,var(--ok) 14%,var(--card))}
+.fnode.next{width:76px;height:76px;border-color:var(--honey);box-shadow:0 5px 0 var(--honey2);animation:pulse 2.2s ease-in-out infinite}
+.fnode.todo{filter:saturate(.55);opacity:.92}
+.fnode-check{position:absolute;right:-6px;top:-6px;width:24px;height:24px;border-radius:50%;background:var(--ok);color:#fff;font-size:.8rem;font-weight:900;display:grid;place-items:center;border:2px solid var(--card)}
+.fnode-t{margin-top:.55rem;font-size:.78rem;font-weight:900;text-align:center;line-height:1.15;background:color-mix(in srgb,var(--card) 88%,transparent);padding:.1rem .45rem;border-radius:10px;max-width:130px}
+@keyframes pulse{0%,100%{transform:scale(1)}50%{transform:scale(1.07)}}
+.fmap-misha{position:absolute;pointer-events:none;animation:bob 3.4s ease-in-out infinite}
+
+/* нижняя навигация — всегда, внутри колонки */
+#bottom,#bottom{display:flex;position:fixed;bottom:0;left:50%;transform:translateX(-50%);width:min(520px,100%);background:var(--card);border-top:2px solid var(--line);justify-content:space-around;padding:.35rem .2rem calc(.45rem + env(safe-area-inset-bottom));z-index:25;border-radius:22px 22px 0 0;box-shadow:0 -4px 18px rgba(90,58,30,.08)}
+#bottom a{display:flex;flex-direction:column;align-items:center;gap:.05rem;font-size:.68rem;font-weight:900;text-decoration:none;color:var(--mute);padding:.3rem .45rem;border-radius:14px;min-width:0}
+#bottom a span{font-size:1.35rem;transition:transform .15s}
+#bottom a.on{color:var(--brand);background:color-mix(in srgb,var(--brand) 13%,transparent)}
+#bottom a.on span{transform:translateY(-2px) scale(1.12)}
+
+/* анимации: уважаем prefers-reduced-motion и настройку «Меньше анимации» */
+@media(prefers-reduced-motion:reduce){.hero-m,.fmap-misha,.fnode.next{animation:none!important}}
+body.reduce .hero-m,body.reduce .fmap-misha,body.reduce .fnode.next{animation:none!important}
+@media(max-width:720px){#top nav{display:none}}

@@ -596,4 +596,8 @@ export const EN: Record<string, string> = {
   "Math: линейные уравнения и наклон": "Math: linear equations and slope",
   "Math: квадраты, функции, степени": "Math: quadratics, functions, exponents",
   "Math: проценты, отношения, среднее": "Math: percents, ratios, mean",
+  "Продолжим учиться!": "Let’s keep learning!",
+  "Продолжить": "Continue",
+  "Заморозка серии": "Streak freeze",
+  "Следующий урок": "Next lesson",
 };

@@ -10,6 +10,7 @@ import { useSettings } from '@/store/settings';
 import { aiAvailable, useAIStatus } from '@/lib/ai';
 import { stopSpeak } from '@/lib/fx';
 import { kvSet } from '@/lib/db';
+import { Cone, Flame, Paw } from './Icons';
 import { t } from '@/i18n';
 
 const NAV: [string, string, string][] = [
@@ -47,6 +48,8 @@ function AIIndicator() {
 
 export function Layout() {
   const xp = useProgress((s) => s.xp);
+  const streak = useProgress((s) => s.streak.count);
+  const freezes = useProgress((s) => s.streak.freezes);
   const lang = useSettings((s) => s.lang);
   const reduce = useSettings((s) => s.reduce);
   const loc = useLocation();
@@ -76,11 +79,11 @@ export function Layout() {
             <Mascot state="hello" still style={{ width: 34, height: 34 }} />
             {t('Миша')}
           </NavLink>
-          <span className="chip" title={t('Опыт')}>⭐ <span id="hdr-xp">{xp}</span></span>
+          <span className="sp" />
+          <span className="stat fire" title={t('Серия')}><Flame size={22} /><b>{streak}</b></span>
+          <span className="stat paw" title={t('Заморозка серии')}><Paw size={20} /><b>{freezes}</b></span>
+          <span className="stat cone" title={t('Опыт')}><Cone size={22} /><b id="hdr-xp">{xp}</b></span>
           <AIIndicator />
-          <nav aria-label={t('Основное')}>
-            {NAV.map(([r, , l]) => <NavLink key={r} to={'/' + r} className={({ isActive }) => (isActive ? 'on' : '')}>{t(l)}</NavLink>)}
-          </nav>
         </header>
         <main id="main" ref={mainRef} tabIndex={-1}>
           <ErrorBoundary resetKey={loc.pathname}>

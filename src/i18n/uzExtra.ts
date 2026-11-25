@@ -178,4 +178,8 @@ export const UZ_EXTRA: Record<string, string> = {
   "Math: линейные уравнения и наклон": "Math: chiziqli tenglamalar va og‘ish",
   "Math: квадраты, функции, степени": "Math: kvadratlar, funksiyalar, darajalar",
   "Math: проценты, отношения, среднее": "Math: foizlar, nisbatlar, o‘rtacha",
+  "Продолжим учиться!": "O‘qishni davom ettiramiz!",
+  "Продолжить": "Davom etish",
+  "Заморозка серии": "Seriyani muzlatish",
+  "Следующий урок": "Keyingi dars",
 };

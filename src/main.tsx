@@ -5,7 +5,9 @@ import App from './App';
 import { initSettings, useSettings } from '@/store/settings';
 import { initProgress } from '@/store/progress';
 import { useData } from '@/data';
+import '@fontsource-variable/nunito';
 import './styles/global.css';
+import './styles/theme.css';
 
 async function boot() {
   await initSettings();

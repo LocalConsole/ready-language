@@ -48,6 +48,7 @@ test.describe('Читалка', () => {
     await page.goto('./#/reader');
     await page.locator('#tx').fill('Zyzzyva is rare.');
     await page.locator('#ta').click();
+    await expect(page.getByText('добавлено пользователем')).toBeVisible();
     await page.getByTestId('text-link').last().click();
     await page.getByText('Zyzzyva').click();
     await page.getByLabel('Свой перевод').fill('тест');

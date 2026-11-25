@@ -6,7 +6,9 @@ import { useData } from '@/data';
 import { today, dayDiff } from '@/lib/util';
 import { dueCards } from '@/lib/srs';
 import { daysLeft, estimate, level, lvlProgress, minutesPerDay } from '@/lib/plan';
-import { nextLesson } from '@/lib/lessons';
+import { lessonsFor, nextLesson } from '@/lib/lessons';
+import { ForestMap, type MapNode } from '@/components/ForestMap';
+import { Mascot } from '@/components/Mascot';
 import { t } from '@/i18n';
 import type { MishaState } from '@/types';
 
@@ -33,8 +35,25 @@ export default function Home() {
     { k: 'errors', acc: 'danger', ic: '📓', title: errs ? t('Разбери ошибки (3 из журнала)') : t('Быстрый тест на 5 вопросов'), sub: t('≈ 5 мин'), to: errs ? '/journal/train' : '/quick' },
   ];
 
+  const all = D ? lessonsFor(D, s) : [];
+  const ci = Math.max(0, nl ? all.findIndex((l) => l.id === nl.id) : all.length - 1);
+  const from = Math.max(0, Math.min(ci - 1, all.length - 5));
+  const nodes: MapNode[] = all.slice(from, from + 5).map((l) => ({ lesson: l, state: s.lessons[l.id] ? 'done' : nl?.id === l.id ? 'next' : 'todo', score: s.lessons[l.id]?.score }));
+
   return (
     <>
+      <h1 className="hero-h">{t('Продолжим учиться!')}</h1>
+      {nl && (
+        <div className="hero card" data-testid="hero">
+          <div className="hero-t">
+            <div className="hero-k">{t('Следующий урок')}</div>
+            <div className="hero-n">{t(nl.title)}</div>
+            <Link className="btn big" to={'/lesson/' + nl.id} data-testid="hero-go">{t('Продолжить')}</Link>
+          </div>
+          <Mascot state={state} className="hero-m" style={{ width: 110 }} />
+        </div>
+      )}
+      {nodes.length > 0 && <ForestMap nodes={nodes} mood={state} prefix="home-node" />}
       <div className="card">
         <Mood state={state} text={doneAll ? t('Миссия дня выполнена! Самовар на стол.') : lost ? t('Серия прервалась… но мы начнём новую. Я никуда не ушёл.') : t('Давай начнём с миссии дня — всего 15–20 минут.')} />
       </div>
