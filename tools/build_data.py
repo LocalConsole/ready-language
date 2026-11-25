@@ -2,7 +2,7 @@
 """Генерирует data/*.json из компактных источников. Запуск: python3 tools/build_data.py"""
 import json, os, re
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-D = os.path.join(ROOT, 'data'); os.makedirs(D, exist_ok=True)
+D = os.path.join(ROOT, 'src', 'data'); os.makedirs(D, exist_ok=True)
 def dump(name, obj):
     with open(os.path.join(D, name), 'w', encoding='utf-8') as f:
         json.dump(obj, f, ensure_ascii=False, separators=(',', ':'))

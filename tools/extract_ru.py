@@ -16,7 +16,7 @@ def walk(o,key=''):
         for x in o: walk(x,key)
     elif isinstance(o,dict):
         for k,v in o.items(): walk(v,k)
-for f in glob.glob('data/*.json'):
+for f in glob.glob('src/data/*.json'):
     if f.endswith('uz.json'):continue
     walk(json.load(open(f,encoding='utf-8')))
 json.dump({'js':js,'data':list(order)},open('/tmp/ru_strings.json','w',encoding='utf-8'),ensure_ascii=False)

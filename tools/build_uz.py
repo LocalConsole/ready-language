@@ -22,7 +22,7 @@ def walk(o):
         if CY.search(o) and o not in seen: seen[o]=1;out.append(o)
     elif isinstance(o,list): [walk(x) for x in o]
     elif isinstance(o,dict): [walk(v) for v in o.values()]
-for f in sorted(glob.glob('data/*.json')):
+for f in sorted(glob.glob('src/data/*.json')):
     if 'uz' in f or f.endswith('words.json'):continue
     walk(json.load(open(f,encoding='utf-8')))
 data={}
@@ -38,9 +38,9 @@ for f in sorted(glob.glob('tools/uzd[0-9].txt')):
             uz=uz2
         data[out[int(m.group(1))]]=uz
 words=[x for x in open('tools/uzw.txt',encoding='utf-8').read().split('\n') if x]
-ws=json.load(open('data/words.json',encoding='utf-8'))
+ws=json.load(open('src/data/words.json',encoding='utf-8'))
 assert len(words)==len(ws)
 wd={w['id']:u for w,u in zip(ws,words)}
 miss=[s for s in out if s not in data]
 print('ui',len(ui),'data',len(data),'missing data',len(miss),'words',len(wd),'bad',bad[:5])
-json.dump({'ui':ui,'data':data,'words':wd},open('data/uz.json','w',encoding='utf-8'),ensure_ascii=False,separators=(',',':'))
+json.dump({'ui':ui,'data':data,'words':wd},open('src/data/uz.json','w',encoding='utf-8'),ensure_ascii=False,separators=(',',':'))
